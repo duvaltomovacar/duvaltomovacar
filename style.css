@@ -1698,7 +1698,11 @@ body > footer p {
 }
 
 .btn-primary {
-    background-color: #0b3d91;
+   .btn-whatsapp {
+    background-color: #25D366;
+    color: white;
+} 
+   background-color: #0b3d91;
     color: white;
 }
 
