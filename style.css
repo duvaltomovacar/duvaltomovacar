@@ -117,7 +117,7 @@ p {
             rgba(3, 15, 35, 0.84) 45%,
             rgba(3, 15, 35, 0.28) 100%
         ),
-        url("images/hero-car.png");
+        url("hero-car.png");
 
     background-size: cover;
     background-position: center;
