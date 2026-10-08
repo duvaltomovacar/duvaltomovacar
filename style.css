@@ -1,0 +1,1899 @@
+/* =========================================================
+   DUVAL TOMOVA CAR
+   STYLE.CSS COMPLET
+   ========================================================= */
+
+
+/* =========================================================
+   1. BASE
+   ========================================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f2f2f2;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #222222;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   2. TITRES GENERAUX
+   ========================================================= */
+
+h1 {
+    color: #0b3d91;
+    font-size: 40px;
+}
+
+h2 {
+    color: #222222;
+}
+
+h3 {
+    color: #0b3d91;
+}
+
+p {
+    color: #555555;
+    font-size: 18px;
+}
+
+
+/* =========================================================
+   3. NAVIGATION
+   ========================================================= */
+
+.navbar {
+    background-color: #0b3d91;
+    min-height: 70px;
+    padding: 15px 30px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: relative;
+    z-index: 1000;
+}
+
+.logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.nav-links a {
+    color: white;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #dbe8ff;
+}
+
+
+/* =========================================================
+   4. HERO
+   ========================================================= */
+
+.hero {
+    position: relative;
+    min-height: 620px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(3, 15, 35, 0.95) 0%,
+            rgba(3, 15, 35, 0.84) 45%,
+            rgba(3, 15, 35, 0.28) 100%
+        ),
+        url("images/hero-car.png");
+
+    background-size: cover;
+    background-position: center;
+
+    color: white;
+    overflow: hidden;
+}
+
+.hero-overlay {
+    width: 100%;
+}
+
+.hero-content {
+    width: 90%;
+    max-width: 1100px;
+
+    margin: auto;
+    padding: 55px 45px;
+
+    text-align: center;
+
+    background: rgba(3, 15, 35, 0.76);
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 18px;
+
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.45);
+}
+
+
+/* HERO LABEL */
+
+.hero-label {
+    color: white !important;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+
+/* HERO TITRE */
+
+.hero-content h1 {
+    color: white !important;
+    font-size: 52px;
+    font-weight: 800;
+
+    margin: 10px 0;
+
+    text-shadow: 0 3px 10px rgba(0, 0, 0, 0.9);
+}
+
+.hero-content h2 {
+    color: white !important;
+    font-size: 28px;
+    font-weight: 600;
+
+    margin: 15px 0;
+
+    text-shadow: 0 3px 8px rgba(0, 0, 0, 0.9);
+}
+
+
+/* HERO TEXTE */
+
+.hero-text {
+    color: white !important;
+
+    max-width: 750px;
+    margin: 20px auto;
+
+    font-size: 18px;
+    line-height: 1.7;
+
+    text-shadow: 0 2px 7px rgba(0, 0, 0, 0.9);
+}
+
+
+/* HERO SERVICES */
+
+.hero-services {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+
+    gap: 18px;
+    flex-wrap: wrap;
+
+    margin: 35px 0;
+}
+
+.hero-service {
+    min-width: 150px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    color: white;
+}
+
+.hero-service span {
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+.hero-service strong {
+    color: white;
+    font-size: 15px;
+}
+
+.hero-service small {
+    color: white;
+    margin-top: 5px;
+    opacity: 0.9;
+}
+
+
+/* HERO BOUTONS */
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 15px;
+    flex-wrap: wrap;
+
+    margin-top: 25px;
+}
+
+.hero-button,
+.hero-whatsapp {
+    display: inline-block;
+
+    padding: 14px 25px;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+
+    transition: 0.3s ease;
+}
+
+.hero-button {
+    background-color: #0d6efd;
+    color: white;
+}
+
+.hero-button:hover {
+    background-color: #084db3;
+    transform: translateY(-2px);
+}
+
+.hero-whatsapp {
+    background-color: #25d366;
+    color: white;
+}
+
+.hero-whatsapp:hover {
+    background-color: #1ebe5d;
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   5. INTRODUCTION
+   ========================================================= */
+
+.intro {
+    max-width: 800px;
+
+    margin: 40px auto;
+    padding: 25px;
+
+    background-color: white;
+
+    border-radius: 12px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.10);
+}
+
+.intro p {
+    margin: 12px 0;
+    font-size: 18px;
+}
+
+
+/* =========================================================
+   6. POURQUOI NOUS CHOISIR
+   ========================================================= */
+
+.why-us {
+    max-width: 1200px;
+
+    margin: 70px auto;
+    padding: 20px;
+}
+
+.why-us h2 {
+    color: #0b3d91;
+    font-size: 32px;
+
+    margin-bottom: 35px;
+}
+
+.why-us-container {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.why-us-card {
+    background-color: white;
+
+    padding: 30px 20px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.10);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.why-us-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 8px 22px rgba(0, 0, 0, 0.16);
+}
+
+.why-icon {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.why-us-card h3 {
+    color: #0b3d91;
+    font-size: 20px;
+
+    margin-bottom: 12px;
+}
+
+.why-us-card p {
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   7. COMMENT CA MARCHE
+   ========================================================= */
+
+.how-it-works {
+    max-width: 1200px;
+
+    margin: 70px auto;
+    padding: 40px 20px;
+
+    background-color: white;
+
+    border-radius: 15px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.10);
+}
+
+.how-it-works h2 {
+    color: #0b3d91;
+
+    font-size: 32px;
+
+    margin-bottom: 40px;
+}
+
+.steps-container {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 25px;
+}
+
+.step {
+    padding: 20px;
+}
+
+.step span {
+    display: inline-block;
+
+    font-size: 30px;
+    font-weight: bold;
+
+    color: #0b3d91;
+
+    margin-bottom: 15px;
+}
+
+.step h3 {
+    color: #222222;
+    font-size: 19px;
+
+    margin-bottom: 10px;
+}
+
+.step p {
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   8. VEHICULES
+   ========================================================= */
+
+.vehicles-container {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 25px;
+
+    max-width: 1200px;
+
+    margin: 30px auto;
+}
+
+
+/* CARTE VEHICULE */
+
+.vehicle {
+    background-color: white;
+
+    width: 260px;
+
+    margin: 20px auto;
+
+    padding: 20px;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 4px 10px rgba(0, 0, 0, 0.15);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.vehicle:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.20);
+}
+
+.vehicle img {
+    width: 100%;
+    height: 160px;
+
+    object-fit: cover;
+
+    border-radius: 8px;
+
+    transition: transform 0.3s ease;
+}
+
+.vehicle:hover img {
+    transform: scale(1.05);
+}
+
+.vehicle h3 {
+    color: #0b3d91;
+
+    font-size: 24px;
+
+    margin: 15px 0 8px;
+}
+
+.vehicle p {
+    font-size: 16px;
+
+    margin: 7px 0;
+}
+
+
+/* BOUTON VEHICULE */
+
+.vehicle-button {
+    display: inline-block;
+
+    margin-top: 10px;
+
+    padding: 10px 20px;
+
+    background-color: #0b3d91;
+
+    color: white;
+
+    border-radius: 6px;
+
+    font-weight: bold;
+
+    transition: 0.3s ease;
+}
+
+.vehicle-button:hover {
+    background-color: #06265c;
+}
+
+
+/* =========================================================
+   9. CARTES VEHICULES MODERNES
+   ========================================================= */
+
+.vehicle-card {
+    background-color: white;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.12);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+
+    max-width: 380px;
+
+    margin: 20px auto;
+}
+
+.vehicle-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.18);
+}
+
+.vehicle-card img {
+    width: 100%;
+    height: 240px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+.vehicle-info {
+    padding: 20px;
+
+    text-align: center;
+}
+
+.vehicle-info h3 {
+    font-size: 24px;
+
+    margin: 0 0 10px;
+
+    color: #111111;
+}
+
+.vehicle-specs {
+    font-size: 15px;
+
+    color: #555555;
+
+    margin: 7px 0;
+}
+
+.vehicle-price {
+    font-size: 25px;
+
+    color: #0b3d91;
+
+    margin: 18px 0;
+
+    font-weight: bold;
+}
+
+
+/* =========================================================
+   10. PAGE DETAIL VEHICULE
+   ========================================================= */
+
+.site-header {
+    background-color: #0b3d91;
+
+    color: white;
+
+    padding: 30px 20px;
+
+    margin-bottom: 30px;
+}
+
+.site-header h1 {
+    color: white;
+
+    margin: 0 0 10px;
+}
+
+.site-header p {
+    color: white;
+
+    margin: 0;
+}
+
+.vehicle-page {
+    max-width: 1100px;
+
+    margin: 40px auto;
+
+    padding: 20px;
+}
+
+.vehicle-detail {
+    background-color: white;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 5px 25px rgba(0, 0, 0, 0.15);
+}
+
+.vehicle-main-image {
+    width: 100%;
+
+    max-height: 550px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+.vehicle-detail-info {
+    padding: 35px;
+}
+
+.vehicle-detail-info h2 {
+    color: #0b3d91;
+
+    font-size: 38px;
+
+    margin: 0 0 5px;
+}
+
+.vehicle-subtitle {
+    font-size: 20px;
+
+    color: #666666;
+}
+
+.vehicle-price-detail {
+    font-size: 32px;
+
+    font-weight: bold;
+
+    color: #0b3d91;
+
+    margin: 25px 0;
+}
+
+
+/* INFORMATIONS VEHICULE */
+
+.vehicle-details-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 15px;
+
+    margin: 25px 0;
+}
+
+.vehicle-details-grid div {
+    background-color: #f5f5f5;
+
+    padding: 18px;
+
+    border-radius: 8px;
+}
+
+.vehicle-details-grid strong {
+    display: block;
+
+    color: #333333;
+
+    margin-bottom: 8px;
+}
+
+.vehicle-details-grid span {
+    color: #666666;
+}
+
+
+/* DESCRIPTION */
+
+.vehicle-description {
+    margin-top: 30px;
+
+    text-align: left;
+
+    line-height: 1.7;
+}
+
+.vehicle-description h3 {
+    color: #0b3d91;
+
+    font-size: 25px;
+
+    margin-bottom: 10px;
+}
+
+
+/* =========================================================
+   11. PRIX
+   ========================================================= */
+
+.vehicle-price-detail {
+    font-size: 32px;
+
+    font-weight: bold;
+
+    color: #0b3d91;
+
+    margin: 25px 0;
+}
+
+.vehicle-price span {
+    font-size: 18px;
+}
+
+.vehicle-price strong {
+    font-size: 28px;
+}
+
+
+/* =========================================================
+   12. BOUTONS CONTACT / WHATSAPP
+   ========================================================= */
+
+.whatsapp-button {
+    display: inline-block;
+
+    margin-top: 20px;
+
+    padding: 15px 25px;
+
+    background-color: #25d366;
+
+    color: white;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    border-radius: 8px;
+
+    transition: 0.3s ease;
+}
+
+.whatsapp-button:hover {
+    background-color: #1ebe5d;
+
+    transform: translateY(-2px);
+}
+
+.contact-button {
+    display: block;
+
+    background-color: #25d366;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 15px;
+
+    border-radius: 8px;
+
+    margin-top: 25px;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    transition: 0.3s ease;
+}
+
+.contact-button:hover {
+    background-color: #1ebe5d;
+}
+
+
+/* =========================================================
+   13. SECTION CONTACT
+   ========================================================= */
+
+.contact-section {
+    background-color: white;
+
+    max-width: 800px;
+
+    margin: 50px auto;
+
+    padding: 40px 20px;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.contact-section h2 {
+    color: #0b3d91;
+
+    font-size: 30px;
+
+    margin-bottom: 25px;
+}
+
+.contact-section p {
+    font-size: 17px;
+
+    margin: 12px 0;
+}
+
+
+/* =========================================================
+   14. BOUTON RETOUR
+   ========================================================= */
+
+.back-button {
+    display: inline-block;
+
+    margin: 20px;
+
+    padding: 10px 20px;
+
+    color: #0b3d91;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    border: 2px solid #0b3d91;
+
+    border-radius: 6px;
+
+    transition: 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #0b3d91;
+
+    color: white;
+}
+
+.vehicle-detail .back-button {
+    display: block;
+
+    width: fit-content;
+
+    margin: 15px auto 0;
+}
+
+
+/* =========================================================
+   15. WHATSAPP FLOTTANT
+   ========================================================= */
+
+.whatsapp-floating {
+    position: fixed;
+
+    right: 25px;
+    bottom: 25px;
+
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background-color: #25d366;
+
+    color: white;
+
+    border-radius: 50%;
+
+    font-size: 30px;
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.25);
+
+    z-index: 9999;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.whatsapp-floating:hover {
+    transform: scale(1.1);
+
+    box-shadow:
+        0 6px 20px rgba(0, 0, 0, 0.30);
+}
+
+
+/* =========================================================
+   16. FOOTER
+   ========================================================= */
+
+footer {
+    margin-top: 50px;
+
+    padding: 25px;
+
+    background-color: #0b3d91;
+}
+
+footer p {
+    color: white;
+
+    margin: 0;
+}
+
+
+/* FOOTER PROFESSIONNEL */
+
+.main-footer {
+    background-color: #0b3d91;
+
+    color: white;
+
+    margin-top: 70px;
+
+    padding-top: 50px;
+}
+
+.footer-container {
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 0 25px 40px;
+
+    display: grid;
+
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+
+    gap: 40px;
+
+    text-align: left;
+}
+
+.footer-column h3 {
+    color: white;
+
+    font-size: 20px;
+
+    margin-bottom: 18px;
+}
+
+.footer-column p {
+    color: white;
+
+    font-size: 15px;
+
+    line-height: 1.6;
+
+    margin: 8px 0;
+}
+
+.footer-column a {
+    display: block;
+
+    color: white;
+
+    text-decoration: none;
+
+    margin: 10px 0;
+
+    font-size: 15px;
+}
+
+.footer-column a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+
+    padding: 20px;
+
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: white;
+
+    font-size: 14px;
+
+    margin: 0;
+}
+
+
+/* =========================================================
+   17. RESPONSIVE TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .why-us-container,
+    .steps-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .vehicle-details-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+/* =========================================================
+   18. RESPONSIVE MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    /* NAVIGATION */
+
+    .navbar {
+        padding: 15px 20px;
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 12px;
+    }
+
+    .logo {
+        font-size: 21px;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        min-height: 700px;
+
+        background-position: 65% center;
+    }
+
+    .hero-content {
+        width: 90%;
+
+        padding: 35px 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 36px;
+    }
+
+    .hero-content h2 {
+        font-size: 22px;
+    }
+
+    .hero-text {
+        font-size: 16px;
+    }
+
+    .hero-services {
+        gap: 15px;
+    }
+
+    .hero-service {
+        min-width: 120px;
+    }
+
+
+    /* VEHICULES */
+
+    .vehicles-container {
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+    .vehicle {
+        width: 90%;
+
+        max-width: 350px;
+    }
+
+
+    /* PAGE DETAIL */
+
+    .vehicle-page {
+        padding: 10px;
+    }
+
+    .vehicle-detail-info {
+        padding: 20px;
+    }
+
+    .vehicle-detail-info h2 {
+        font-size: 30px;
+    }
+
+    .vehicle-main-image {
+        max-height: 350px;
+    }
+
+
+    /* FOOTER */
+
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+/* =========================================================
+   19. PETIT MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .why-us-container,
+    .steps-container {
+        grid-template-columns: 1fr;
+    }
+
+    .why-us h2,
+    .how-it-works h2 {
+        font-size: 26px;
+    }
+
+    .vehicle-details-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .vehicle-price-detail {
+        font-size: 28px;
+    }
+
+    .whatsapp-floating {
+        width: 55px;
+        height: 55px;
+
+        right: 18px;
+        bottom: 18px;
+
+        font-size: 27px;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+
+        text-align: center;
+    }
+}
+
+
+/* =========================================================
+   FIN DU STYLE
+   ========================================================= */
+   /* =========================================================
+   SECTION NOS VÉHICULES - VERSION PROFESSIONNELLE
+   ========================================================= */
+
+#vehicules {
+    text-align: center;
+    font-size: 34px;
+    margin: 60px 0 35px;
+    color: #0b1f3a;
+}
+
+.vehicles-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto 70px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.vehicle {
+    background: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #e5e5e5;
+    padding-bottom: 25px;
+}
+
+.vehicle:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.20);
+}
+
+.vehicle img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    display: block;
+}
+
+.vehicle h3 {
+    font-size: 24px;
+    color: #0b1f3a;
+    margin: 20px 15px 10px;
+}
+
+.vehicle p {
+    font-size: 15px;
+    color: #555;
+    margin: 5px 15px;
+}
+
+.vehicle p strong {
+    display: block;
+    font-size: 21px;
+    color: #0b1f3a;
+    margin-top: 12px;
+}
+
+.vehicle-button {
+    display: inline-block;
+    margin-top: 18px;
+    padding: 12px 25px;
+    background: #0b1f3a;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.vehicle-button:hover {
+    background: #0066cc;
+    transform: scale(1.04);
+}
+
+/* Téléphone */
+@media (max-width: 900px) {
+    .vehicles-container {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+    }
+
+    #vehicules {
+        font-size: 28px;
+    }
+}
+.vehicle {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.vehicle-button {
+    margin-top: auto;
+    align-self: center;
+}
+/* =========================================================
+   SECTION CONTACT
+   ========================================================= */
+
+.contact-section {
+    width: 90%;
+    max-width: 900px;
+    margin: 70px auto;
+    padding: 50px 30px;
+    text-align: center;
+    background: linear-gradient(135deg, #0b1f3a, #123f73);
+    border-radius: 18px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.18);
+    color: white;
+}
+
+.contact-section h2 {
+    color: white !important;
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+
+.contact-section p {
+    color: white !important;
+    font-size: 17px;
+    margin: 10px 0;
+}
+
+.whatsapp-button {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 15px 30px;
+    background: #25d366;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.whatsapp-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+/* =========================================================
+   FOOTER PROFESSIONNEL
+   ========================================================= */
+
+.main-footer {
+    background: #071426;
+    color: white;
+    margin-top: 70px;
+    padding-top: 50px;
+}
+
+.footer-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1.5fr 1fr;
+    gap: 40px;
+    padding-bottom: 40px;
+}
+
+.footer-column h3 {
+    color: white;
+    font-size: 20px;
+    margin-bottom: 18px;
+}
+
+.footer-column p {
+    color: #d8dee8;
+    font-size: 15px;
+    margin: 8px 0;
+}
+
+.footer-column a {
+    display: block;
+    color: #d8dee8;
+    text-decoration: none;
+    margin: 8px 0;
+    transition: color 0.3s ease;
+}
+
+.footer-column a:hover {
+    color: #25d366;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    text-align: center;
+    padding: 20px;
+}
+
+.footer-bottom p {
+    color: #aeb8c7;
+    font-size: 14px;
+    margin: 0;
+}
+
+/* Footer sur téléphone */
+@media (max-width: 800px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 25px;
+    }
+
+    .footer-column a {
+        display: block;
+    }
+}
+/* =========================================================
+   PAGE DÉTAIL VÉHICULE
+   ========================================================= */
+
+.site-header {
+    background: #071426;
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+}
+
+.site-header h1 {
+    color: white;
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.site-header p {
+    color: #d8dee8;
+    margin: 0;
+}
+
+.vehicle-page {
+    width: 90%;
+    max-width: 1150px;
+    margin: 50px auto;
+}
+
+.vehicle-detail {
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+}
+
+.vehicle-main-image {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    display: block;
+}
+
+.vehicle-detail-info {
+    padding: 40px;
+}
+
+.vehicle-detail-info h2 {
+    color: #0b1f3a;
+    font-size: 36px;
+    margin-bottom: 5px;
+}
+
+.vehicle-subtitle {
+    color: #666;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.vehicle-price-detail {
+    display: inline-block;
+    background: #0b1f3a;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.vehicle-details-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-bottom: 35px;
+}
+
+.vehicle-details-grid div {
+    background: #f5f7fa;
+    border: 1px solid #e2e6eb;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.vehicle-details-grid strong {
+    display: block;
+    color: #0b1f3a;
+    margin-bottom: 5px;
+}
+
+.vehicle-details-grid span {
+    color: #555;
+}
+
+.vehicle-description {
+    margin-bottom: 30px;
+}
+
+.vehicle-description h3 {
+    color: #0b1f3a;
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.vehicle-description p {
+    color: #555;
+    margin-bottom: 12px;
+}
+
+.contact-button {
+    display: inline-block;
+    background: #25d366;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 15px 28px;
+    border-radius: 8px;
+    margin-right: 10px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.back-button {
+    display: inline-block;
+    background: #0b1f3a;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 15px 28px;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+}
+
+.back-button:hover {
+    background: #0066cc;
+}
+
+.vehicle-page + footer,
+body > footer {
+    background: #071426;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 50px;
+}
+
+body > footer p {
+    color: #d8dee8;
+    margin: 0;
+}
+
+/* Téléphone */
+@media (max-width: 800px) {
+
+    .vehicle-main-image {
+        height: 300px;
+    }
+
+    .vehicle-detail-info {
+        padding: 25px;
+    }
+
+    .vehicle-detail-info h2 {
+        font-size: 30px;
+    }
+
+    .vehicle-details-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-button,
+    .back-button {
+        display: block;
+        text-align: center;
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .vehicle-details-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .vehicle-main-image {
+        height: 250px;
+    }
+}/* TEST MENU SERVICES */
+
+.nav-links {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 20px !important;
+    align-items: center !important;
+}
+
+.nav-links a {
+    display: inline-block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}/* MENU PRINCIPAL - AFFICHAGE STABLE */
+
+.navbar {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.nav-links {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    flex-wrap: nowrap !important;
+    gap: 18px !important;
+}
+
+.nav-links a {
+    display: inline-block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    white-space: nowrap !important;
+}/* NAVIGATION DES PAGES LÉGALES */
+.legal-navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    margin: 30px 0;
+    flex-wrap: wrap;
+}
+
+.legal-navigation a {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #0b3d91;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.legal-navigation a:hover {
+    background-color: #06285f;
+}.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 25px;
+    flex-wrap: wrap;
+}
+
+.hero-buttons a {
+    display: inline-block;
+    padding: 13px 22px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn-primary {
+    background-color: #0b3d91;
+    color: white;
+}
+
+.btn-whatsapp {
+    background-color: #25D366;
+    color: white;
+}
+
+.hero-buttons a:hover {
+    opacity: 0.85;
+}/* AVANTAGES - STYLE PROFESSIONNEL */
+.hero-services {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin: 35px auto;
+    max-width: 1100px;
+}
+
+.hero-service {
+    background: white;
+    padding: 22px 15px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-service:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
+}
+
+.hero-service strong {
+    display: block;
+    font-size: 17px;
+    margin: 8px 0;
+    color: #0b3d91;
+}
+
+.hero-service span {
+    display: block;
+    font-size: 14px;
+    color: #555;
+}
+
+@media (max-width: 768px) {
+    .hero-services {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        padding: 0 15px;
+    }
+
+    .hero-service {
+        padding: 18px 10px;
+    }
+
+    .hero-service strong {
+        font-size: 15px;
+    }
+
+    .hero-service span {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-services {
+        grid-template-columns: 1fr;
+    }
+}/* CARTES VÉHICULES - STYLE PROFESSIONNEL */
+#vehicules {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#vehicules h2 {
+    font-size: 32px;
+    color: #0b3d91;
+    margin-bottom: 35px;
+}
+
+.vehicles-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+.vehicle {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.10);
+    padding-bottom: 25px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.vehicle:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.15);
+}
+
+.vehicle img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+.vehicle h3 {
+    font-size: 21px;
+    color: #0b3d91;
+    margin: 18px 15px 8px;
+}
+
+.vehicle p {
+    margin: 7px 15px;
+    color: #555;
+    line-height: 1.5;
+}
+
+.vehicle p strong {
+    color: #111;
+    font-size: 18px;
+}
+
+.vehicle-button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 22px;
+    background-color: #0b3d91;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.vehicle-button:hover {
+    background-color: #06285f;
+}@media (max-width: 768px) {
+    .vehicles-container {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+    }
+
+    #vehicules h2 {
+        font-size: 27px;
+    }
+
+    .vehicle img {
+        height: 230px;
+    }
+}@media (max-width: 768px) {
+    .vehicles-container {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+    }
+
+    #vehicules h2 {
+        font-size: 27px;
+    }
+
+    .vehicle img {
+        height: 230px;
+    }
+}.vehicle-whatsapp {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 11px 20px;
+    background-color: #25D366;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.vehicle-whatsapp:hover {
+    background-color: #1ebe5d;
+}.footer-message {
+    max-width: 750px;
+    margin: 20px auto;
+    padding: 15px 20px;
+    color: white;
+    font-size: 16px;
+    line-height: 1.8;
+    text-align: center;
+}
+
+.footer-message strong {
+    color: #f1c40f;
+}.footer-whatsapp {
+    display: inline-block;
+    margin: 10px auto 25px;
+    padding: 13px 24px;
+    background-color: #25D366;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.footer-whatsapp:hover {
+    background-color: #1ebe5d;
+}
