@@ -117,6 +117,7 @@ const translations = {
     heroContact: "💬 Contactarnos por WhatsApp",
 
     aboutSubtitle: "Tu socio para la importación de vehículos desde Alemania",
+    heroSubtitle: "Tu socio para importar vehículos desde Alemania",
     aboutDescription: "Te acompañamos en la búsqueda, selección e importación de tu vehículo desde Alemania hasta su entrega.",
     whoWeAre: "¿Quiénes somos?",
     specialist: "Especialistas en importación",
