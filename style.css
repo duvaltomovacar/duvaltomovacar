@@ -1920,3 +1920,27 @@ opacity: 0.85;
 .footer-whatsapp:hover {
     background-color: #1ebe5d;
 }
+/* Sélecteur de langue */
+.language-selector {
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 6px;
+flex-shrink: 0;
+}
+
+.language-selector button {
+background-color: #ffffff;
+color: #0b3d91;
+border: 1px solid #ffffff;
+border-radius: 5px;
+padding: 7px 10px;
+font-weight: bold;
+cursor: pointer;
+transition: 0.3s ease;
+}
+
+.language-selector button:hover {
+background-color: #dbe8ff;
+transform: translateY(-2px);
+}
