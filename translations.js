@@ -1,4 +1,4 @@
-
+```javascript
 const translations = {
   fr: {
     home: "Accueil",
@@ -31,8 +31,14 @@ const translations = {
     aboutTitle: "À propos de nous",
     servicesTitle: "Nos services",
     satisfaction: "La satisfaction de nos clients est notre priorité",
-    tagline: "Tout le monde a le droit d'avoir une voiture"
+    tagline: "Tout le monde a le droit d'avoir une voiture",
+    heroLabel: "🇩🇪 IMPORTATION AUTOMOBILE DEPUIS L'ALLEMAGNE",
+    heroTitle: "Votre partenaire automobile pour l'importation depuis l'Allemagne",
+    heroText: "Découvrez des véhicules soigneusement sélectionnés en Allemagne et bénéficiez d'un accompagnement professionnel de la réservation jusqu'à la livraison.",
+    heroVehicles: "🚗 Voir nos véhicules",
+    heroContact: "💬 Nous contacter sur WhatsApp"
   },
+
   es: {
     home: "Inicio",
     about: "Sobre nosotros",
@@ -64,8 +70,14 @@ const translations = {
     aboutTitle: "Sobre nosotros",
     servicesTitle: "Nuestros servicios",
     satisfaction: "La satisfacción de nuestros clientes es nuestra prioridad",
-    tagline: "Todo el mundo tiene derecho a tener un coche"
+    tagline: "Todo el mundo tiene derecho a tener un coche",
+    heroLabel: "🇩🇪 IMPORTACIÓN DE VEHÍCULOS DESDE ALEMANIA",
+    heroTitle: "Tu socio para la importación de vehículos desde Alemania",
+    heroText: "Descubre vehículos cuidadosamente seleccionados en Alemania y recibe asesoramiento profesional desde la reserva hasta la entrega.",
+    heroVehicles: "🚗 Ver nuestros vehículos",
+    heroContact: "💬 Contactarnos por WhatsApp"
   },
+
   de: {
     home: "Startseite",
     about: "Über uns",
@@ -97,8 +109,14 @@ const translations = {
     aboutTitle: "Über uns",
     servicesTitle: "Unsere Dienstleistungen",
     satisfaction: "Die Zufriedenheit unserer Kunden hat für uns Priorität",
-    tagline: "Jeder hat das Recht, ein Auto zu besitzen"
+    tagline: "Jeder hat das Recht, ein Auto zu besitzen",
+    heroLabel: "🇩🇪 FAHRZEUGIMPORT AUS DEUTSCHLAND",
+    heroTitle: "Ihr Partner für den Fahrzeugimport aus Deutschland",
+    heroText: "Entdecken Sie sorgfältig ausgewählte Fahrzeuge aus Deutschland und profitieren Sie von professioneller Betreuung von der Reservierung bis zur Lieferung.",
+    heroVehicles: "🚗 Unsere Fahrzeuge ansehen",
+    heroContact: "💬 Kontakt über WhatsApp"
   },
+
   en: {
     home: "Home",
     about: "About us",
@@ -130,7 +148,12 @@ const translations = {
     aboutTitle: "About us",
     servicesTitle: "Our services",
     satisfaction: "Customer satisfaction is our priority",
-    tagline: "Everyone deserves the opportunity to own a car"
+    tagline: "Everyone deserves the opportunity to own a car",
+    heroLabel: "🇩🇪 CAR IMPORT FROM GERMANY",
+    heroTitle: "Your partner for importing cars from Germany",
+    heroText: "Discover carefully selected vehicles in Germany and benefit from professional support from reservation to delivery.",
+    heroVehicles: "🚗 View our vehicles",
+    heroContact: "💬 Contact us on WhatsApp"
   }
 };
 
@@ -141,9 +164,10 @@ function changeLanguage(language) {
 
   document.querySelectorAll("[data-i18n]").forEach((element) => {
     const key = element.getAttribute("data-i18n");
+    const translatedText = translations[language][key];
 
-    if (translations[language][key]) {
-      element.textContent = translations[language][key];
+    if (translatedText !== undefined) {
+      element.textContent = translatedText;
     }
   });
 
@@ -176,3 +200,4 @@ document.addEventListener("DOMContentLoaded", () => {
 
   changeLanguage(language);
 });
+```
