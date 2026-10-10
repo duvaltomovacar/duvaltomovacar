@@ -1,4 +1,3 @@
-```javascript
 const translations = {
   fr: {
     home: "Accueil",
@@ -200,4 +199,3 @@ document.addEventListener("DOMContentLoaded", () => {
 
   changeLanguage(language);
 });
-```
