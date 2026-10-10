@@ -407,6 +407,10 @@ p {
 
 .step {
     padding: 20px;
+    background: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 .step span {
