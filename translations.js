@@ -194,6 +194,7 @@ const translations = {
     heroContact: "💬 Kontakt über WhatsApp",
 
     aboutSubtitle: "Ihr Partner für den Fahrzeugimport aus Deutschland",
+    heroSubtitle: "Ihr Partner für den Fahrzeugimport aus Deutschland",
     aboutDescription: "Wir begleiten Sie bei der Suche, Auswahl und dem Import Ihres Fahrzeugs aus Deutschland bis zur Lieferung.",
     whoWeAre: "Wer sind wir?",
     specialist: "Spezialist für Fahrzeugimporte",
@@ -270,6 +271,7 @@ const translations = {
     heroContact: "💬 Contact us on WhatsApp",
 
     aboutSubtitle: "Your partner for importing cars from Germany",
+    heroSubtitle: "Your partner for importing vehicles from Germany",
     aboutDescription: "We support you in finding, selecting, and importing your vehicle from Germany through to delivery.",
     whoWeAre: "Who are we?",
     specialist: "Vehicle import specialists",
