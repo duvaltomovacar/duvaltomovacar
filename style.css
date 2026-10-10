@@ -412,6 +412,14 @@ p {
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
+.step {
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.step:hover {
+transform: translateY(-6px);
+box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
 
 .step span {
     display: inline-block;
