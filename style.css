@@ -592,70 +592,51 @@ box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
    9. CARTES VEHICULES MODERNES
    ========================================================= */
 
+
 .vehicle-card {
     background-color: white;
-
-    border-radius: 12px;
-
+    border: 1px solid #C9A44C;
+    border-radius: 10px;
     overflow: hidden;
-
-    box-shadow:
-        0 4px 15px rgba(0, 0, 0, 0.12);
-
-    transition:
-        transform 0.3s ease,
-        box-shadow 0.3s ease;
-
-    max-width: 380px;
-
-    margin: 20px auto;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.10);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 300px;
+    margin: 15px auto;
 }
 
 .vehicle-card:hover {
-    transform: translateY(-5px);
-
-    box-shadow:
-        0 8px 25px rgba(0, 0, 0, 0.18);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
 }
 
 .vehicle-card img {
     width: 100%;
-    height: 240px;
-
+    height: 180px;
     object-fit: cover;
-
     display: block;
 }
 
 .vehicle-info {
-    padding: 20px;
-
+    padding: 12px;
     text-align: center;
 }
 
 .vehicle-info h3 {
-    font-size: 24px;
-
-    margin: 0 0 10px;
-
-    color: #111111;
+    font-size: 20px;
+    margin: 0 0 8px;
+    color: #0B1F3A;
 }
 
 .vehicle-specs {
-    font-size: 15px;
-
+    font-size: 13px;
     color: #555555;
-
-    margin: 7px 0;
+    margin: 5px 0;
 }
 
 .vehicle-price {
-    font-size: 25px;
-
-    color: #B58A2A;
-
-    margin: 18px 0;
-
+    font-size: 22px;
+    color: #B58A2A !important;
+    margin: 12px 0;
     font-weight: bold;
 }
 
