@@ -2224,3 +2224,25 @@ transform: translateY(-2px);
 .hero-services .hero-service span {
     color: #ffffff !important;
 }
+
+/* IDENTITE VISUELLE DUVAL TOMOVA CAR : BLEU ET OR */
+:root {
+    --dtc-bleu: #0B1F3A;
+    --dtc-or: #C9A44C;
+    --dtc-blanc: #FFFFFF;
+    --dtc-fond: #F4F6F9;
+}
+
+/* Boutons principaux */
+button,
+.btn,
+.btn-primary,
+.button,
+.cta-button {
+    border-color: var(--dtc-or);
+}
+
+/* Liens au survol */
+a:hover {
+    color: var(--dtc-or);
+}
