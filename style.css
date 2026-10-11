@@ -60,17 +60,20 @@ p {
    3. NAVIGATION
    ========================================================= */
 
+
 .navbar {
     background-color: #0b3d91;
     min-height: 70px;
     padding: 15px 30px;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+    flex-wrap: wrap;
+    gap: 15px;
     position: relative;
     z-index: 1000;
+    box-sizing: border-box;
+    width: 100%;
 }
 
 .logo {
@@ -82,20 +85,59 @@ p {
 
 .nav-links {
     display: flex;
-    gap: 20px;
+    flex-wrap: wrap;
+    gap: 12px 20px;
     align-items: center;
+    justify-content: center;
 }
 
 .nav-links a {
     color: white;
     font-weight: bold;
     transition: 0.3s ease;
+    text-decoration: none;
 }
 
 .nav-links a:hover {
     color: #dbe8ff;
 }
 
+/* ADAPTATION AUX TELEPHONES */
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        justify-content: center;
+        padding: 15px 10px;
+        gap: 12px;
+    }
+
+    .logo {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .navbar .language-selector {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 8px;
+        width: 100%;
+    }
+
+    .navbar .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px 16px;
+        width: 100%;
+    }
+
+    .navbar .nav-links a {
+        font-size: 14px;
+        white-space: normal;
+        text-align: center;
+    }
+}
 
 /* =========================================================
    4. HERO
