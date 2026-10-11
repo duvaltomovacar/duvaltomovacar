@@ -2192,3 +2192,8 @@ transform: translateY(-2px);
         flex-shrink: 0 !important;
     }
 }
+/* Réduction du cadre uniquement sur la page Accueil */
+.home-hero .hero-content {
+    padding: 40px 35px;
+    max-width: 1000px;
+}
