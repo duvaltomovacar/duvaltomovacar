@@ -2211,3 +2211,16 @@ transform: translateY(-2px);
 .features strong {
     color: #ffffff;
 }
+
+/* Correction couleur des 4 blocs de l'accueil */
+.hero-services .hero-service {
+    background-color: #0b1f3a !important;
+    color: #ffffff !important;
+    border-color: #294766 !important;
+}
+
+.hero-services .hero-service strong,
+.hero-services .hero-service small,
+.hero-services .hero-service span {
+    color: #ffffff !important;
+}
