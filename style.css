@@ -2197,3 +2197,17 @@ transform: translateY(-2px);
     padding: 40px 35px;
     max-width: 1000px;
 }
+
+/* Blocs de présentation sur l'accueil */
+.home-hero ~ .features,
+.features {
+    background-color: #0b1f3a;
+    color: #ffffff;
+}
+
+.features h2,
+.features h3,
+.features p,
+.features strong {
+    color: #ffffff;
+}
