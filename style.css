@@ -1750,8 +1750,9 @@ transition: 0.3s ease;
 }
 
 .btn-primary {
-background-color: #0b3d91;
-color: white;
+    background-color: #C9A44C;
+    color: #0B1F3A;
+    border: 1px solid #C9A44C;
 }
 
 .btn-whatsapp {
