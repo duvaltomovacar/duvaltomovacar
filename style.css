@@ -2263,3 +2263,8 @@ a:hover {
 .vehicle-price-detail {
     color: #B58A2A !important;
 }
+
+/* Prix toujours dorés sur les fiches véhicules */
+.vehicle-detail-info .vehicle-price-detail {
+    color: #B58A2A !important;
+}
