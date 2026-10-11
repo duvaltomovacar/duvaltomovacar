@@ -2248,3 +2248,8 @@ button,
 a:hover {
     color: var(--dtc-or);
 }
+
+/* Couleur premium des prix des véhicules */
+.vehicle-price {
+    color: #B58A2A !important;
+}
