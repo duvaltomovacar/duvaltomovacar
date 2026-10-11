@@ -729,41 +729,26 @@ box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 
 .vehicle-subtitle {
     font-size: 20px;
-
     color: #666666;
 }
-
 .vehicle-price-detail {
     font-size: 32px;
-
     font-weight: bold;
-
-    color: #0b3d91;
-
+   color: #B58A2A;
     margin: 25px 0;
 }
-
-
 /* INFORMATIONS VEHICULE */
-
 .vehicle-details-grid {
     display: grid;
-
     grid-template-columns: repeat(4, 1fr);
-
     gap: 15px;
-
     margin: 25px 0;
 }
-
 .vehicle-details-grid div {
     background-color: #f5f5f5;
-
     padding: 18px;
-
     border-radius: 8px;
 }
-
 .vehicle-details-grid strong {
     display: block;
 
@@ -771,69 +756,45 @@ box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 
     margin-bottom: 8px;
 }
-
 .vehicle-details-grid span {
     color: #666666;
 }
-
-
 /* DESCRIPTION */
 
 .vehicle-description {
     margin-top: 30px;
-
     text-align: left;
-
     line-height: 1.7;
 }
-
 .vehicle-description h3 {
     color: #0b3d91;
-
     font-size: 25px;
-
     margin-bottom: 10px;
 }
-
-
 /* =========================================================
    11. PRIX
    ========================================================= */
-
 .vehicle-price-detail {
     font-size: 32px;
-
     font-weight: bold;
-
     color: #0b3d91;
-
     margin: 25px 0;
 }
-
 .vehicle-price span {
     font-size: 18px;
 }
-
 .vehicle-price strong {
     font-size: 28px;
 }
-
-
 /* =========================================================
    12. BOUTONS CONTACT / WHATSAPP
    ========================================================= */
-
 .whatsapp-button {
     display: inline-block;
-
     margin-top: 20px;
-
     padding: 15px 25px;
-
     background-color: #25d366;
-
     color: white;
-
     font-size: 18px;
 
     font-weight: bold;
