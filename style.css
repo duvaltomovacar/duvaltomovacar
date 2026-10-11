@@ -1944,3 +1944,36 @@ transition: 0.3s ease;
 background-color: #dbe8ff;
 transform: translateY(-2px);
 }
+
+/* CORRECTION DU MENU SUR TELEPHONE */
+@media screen and (max-width: 600px) {
+
+  nav {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 16px;
+    padding: 10px;
+    margin: 0;
+    list-style: none;
+  }
+
+  nav ul li {
+    margin: 0;
+    padding: 0;
+  }
+
+  nav ul li a {
+    display: block;
+    font-size: 14px;
+    white-space: normal;
+    text-align: center;
+  }
+
+}
