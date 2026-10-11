@@ -1977,3 +1977,48 @@ transform: translateY(-2px);
   }
 
 }
+
+/* CORRECTION DU MENU MOBILE - DUVAL TOMOVA CAR */
+@media screen and (max-width: 768px) {
+
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 12px;
+        gap: 12px;
+    }
+
+    .navbar .logo {
+        text-align: center;
+        width: 100%;
+    }
+
+    .navbar .language-selector {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 8px;
+        width: 100%;
+    }
+
+    .navbar .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 10px 16px;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .navbar .nav-links a {
+        display: inline-block;
+        font-size: 14px;
+        white-space: normal;
+        text-align: center;
+    }
+}
