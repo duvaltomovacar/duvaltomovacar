@@ -145,7 +145,7 @@ p {
 
 .hero {
     position: relative;
-    min-height: 620px;
+    min-height: 520px;
 
     display: flex;
     align-items: center;
@@ -1143,7 +1143,7 @@ footer p {
     /* HERO */
 
     .hero {
-        min-height: 700px;
+        min-height: 560px;
 
         background-position: 65% center;
     }
