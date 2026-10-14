@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Administration | DUVAL TOMOVA CAR</title>
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      padding: 24px;
+      font-family: Arial, sans-serif;
+      background: #f3f5f8;
+      color: #222;
+    }
+
+    .container {
+      max-width: 760px;
+      margin: 30px auto;
+      padding: 28px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px #00000012;
+    }
+
+    h1 { margin-top: 0; }
+    label { display: block; margin-top: 18px; font-weight: bold; }
+
+    input, textarea, button {
+      width: 100%;
+      margin-top: 8px;
+      padding: 12px;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+
+    input, textarea {
+      border: 1px solid #ccc;
+    }
+
+    textarea {
+      min-height: 110px;
+      resize: vertical;
+    }
+
+    button {
+      border: 0;
+      background: #111827;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:disabled {
+      opacity: 0.6;
+      cursor: wait;
+    }
+
+    .notice {
+      padding: 12px;
+      background: #fff7db;
+      border-radius: 6px;
+      line-height: 1.5;
+    }
+
+    #status { margin-top: 18px; white-space: pre-wrap; }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <h1>DUVAL TOMOVA CAR</h1>
+    <h2>Administration des véhicules</h2>
+
+    <p class="notice">
+      Espace de gestion. Utilise uniquement ton secret d’administration.
+      Cette page ne remplace pas une protection d’accès au site.
+    </p>
+
+    <form id="vehicle-form">
+      <label for="admin-secret">Secret d’administration</label>
+      <input id="admin-secret" type="password"
+             autocomplete="current-password" required>
+
+      <label for="title">Marque et modèle</label>
+      <input id="title" name="title"
+             placeholder="Ex. Mercedes-Benz GLC 220d" required>
+
+      <label for="price">Prix en euros (€)</label>
+      <input id="price" name="price" type="number"
+             min="1" step="1" placeholder="25000" required>
+
+      <label for="description">Description</label>
+      <textarea id="description" name="description"
+                placeholder="Année, kilométrage, motorisation, état…"></textarea>
+
+      <label for="images">Chemins des photos déjà hébergées</label>
+      <textarea id="images" name="images"
+        placeholder="/images/voiture-1.jpg&#10;/images/voiture-2.jpg"></textarea>
+
+      <p class="notice">
+        Pour cette première version, les photos doivent déjà être présentes
+        sur le site. Le téléversement de nouvelles photos sera ajouté ensuite.
+      </p>
+
+      <button id="publish-button" type="submit">Publier le véhicule</button>
+    </form>
+
+    <div id="status" role="status" aria-live="polite"></div>
+  </main>
+
+  <script>
+    const API_URL =
+      "https://duvaltomova-publish.duvaltomovacar.workers.dev/api/publish";
+
+    const form = document.getElementById("vehicle-form");
+    const button = document.getElementById("publish-button");
+    const statusBox = document.getElementById("status");
+
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault();
+
+      button.disabled = true;
+      statusBox.textContent = "Publication en cours…";
+
+      const images = document.getElementById("images").value
+        .split(/\r?\n/)
+        .map(path => path.trim())
+        .filter(Boolean);
+
+      const vehicle = {
+        title: document.getElementById("title").value.trim(),
+        price: Number(document.getElementById("price").value),
+        description: document.getElementById("description").value.trim(),
+        images
+      };
+
+      try {
+        const response = await fetch(API_URL, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "Authorization":
+              "Bearer " + document.getElementById("admin-secret").value
+          },
+          body: JSON.stringify(vehicle)
+        });
+
+        const result = await response.json();
+
+        if (!response.ok) {
+          throw new Error(result.error || "La publication a échoué.");
+        }
+
+        statusBox.textContent =
+          "Véhicule enregistré dans GitHub. L’affichage sur le site dépend de l’intégration du catalogue.";
+        form.reset();
+      } catch (error) {
+        statusBox.textContent =
+          "Erreur : " + error.message +
+          "\nVérifie la configuration du Worker et réessaie.";
+      } finally {
+        button.disabled = false;
+      }
+    });
+  </script>
+</body>
+</html>
