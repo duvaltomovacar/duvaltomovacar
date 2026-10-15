@@ -1,1 +1,17 @@
-[]
+[
+  {
+    "id": "338391b3-1e05-48ee-be76-5ab80b79fd1e",
+    "title": "Volkswagen",
+    "price": 9000,
+    "description": "Volkswagen Amarok 2.0 TDI DSG 4 Motion Double Cab Cruise Pickup 179 Ch/2016/80000 km(certifié)/Automatique/Diesel",
+    "images": [
+      "/images/vehicles/338391b3-1e05-48ee-be76-5ab80b79fd1e/843225849_3041499166192013_4709247149575660348_n-1.jpg",
+      "/images/vehicles/338391b3-1e05-48ee-be76-5ab80b79fd1e/845505587_4123717384430948_9184291797111481737_n-2.jpg",
+      "/images/vehicles/338391b3-1e05-48ee-be76-5ab80b79fd1e/845530676_1363569568945419_5964885702760595060_n-3.jpg",
+      "/images/vehicles/338391b3-1e05-48ee-be76-5ab80b79fd1e/846087195_1667679218077237_2256362527036333901_n-4.jpg",
+      "/images/vehicles/338391b3-1e05-48ee-be76-5ab80b79fd1e/848072527_1373646717898841_1861593636548394560_n-5.jpg",
+      "/images/vehicles/338391b3-1e05-48ee-be76-5ab80b79fd1e/849694482_1612058707283069_2107602360656409_n-6.jpg"
+    ],
+    "publishedAt": "2026-10-15T02:23:33.024Z"
+  }
+]
