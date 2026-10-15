@@ -550,3 +550,209 @@ section {
     padding: 18px;
   }
 }
+
+/* ==========================================
+   DUVAL TOMOVA CAR — RESTAURATION DES CADRES
+   Ordinateur + téléphone
+========================================== */
+
+/* Fond général et sections */
+body {
+    background: #F4F6F9;
+}
+
+.why-us,
+.how-it-works,
+#vehicules {
+    padding: 50px 24px;
+    box-sizing: border-box;
+}
+
+.why-us > h2,
+.how-it-works > h2,
+#vehicules > h2 {
+    max-width: 1200px;
+    margin: 0 auto 30px;
+}
+
+/* Cartes : Pourquoi nous choisir */
+.why-us-container {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 22px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.why-us-card {
+    box-sizing: border-box;
+    min-width: 0;
+    padding: 25px;
+    background: #ffffff;
+    border: 1px solid #e2e6ec;
+    border-radius: 14px;
+    box-shadow: 0 8px 24px rgba(11, 31, 58, 0.09);
+}
+
+.why-us-card .why-icon {
+    margin-bottom: 14px;
+    font-size: 30px;
+}
+
+.why-us-card h3 {
+    color: #0B1F3A;
+    margin-top: 0;
+}
+
+.why-us-card p {
+    color: #657186;
+    margin-bottom: 0;
+}
+
+/* Cadres : Comment ça marche */
+.steps-container {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 22px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.step {
+    box-sizing: border-box;
+    min-width: 0;
+    padding: 25px;
+    background: #ffffff;
+    border: 1px solid #e2e6ec;
+    border-radius: 14px;
+    box-shadow: 0 8px 24px rgba(11, 31, 58, 0.09);
+}
+
+.step > span {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: #C9A44C;
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.step h3 {
+    color: #0B1F3A;
+}
+
+.step p {
+    color: #657186;
+}
+
+/* Cadres : véhicules */
+.vehicles-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: stretch;
+}
+
+.vehicle {
+    box-sizing: border-box;
+    min-width: 0;
+    padding: 18px;
+    background: #ffffff;
+    border: 1px solid #e2e6ec;
+    border-radius: 14px;
+    box-shadow: 0 8px 24px rgba(11, 31, 58, 0.09);
+    overflow: hidden;
+}
+
+.vehicle img {
+    display: block;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 9px;
+}
+
+.vehicle h3 {
+    color: #0B1F3A;
+}
+
+.vehicle p {
+    color: #657186;
+}
+
+.vehicle-button,
+.vehicle-details-button {
+    display: inline-block;
+    padding: 12px 18px;
+    margin: 8px 6px 8px 0;
+    border: 1px solid #C9A44C;
+    border-radius: 8px;
+    background: #0B1F3A;
+    color: #ffffff !important;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.vehicle-whatsapp {
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 12px 18px;
+    margin: 8px 0;
+    border: 1px solid #16845B;
+    border-radius: 8px;
+    background: #111827;
+    color: #ffffff !important;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+/* Contact encadré */
+.contact-section {
+    box-sizing: border-box;
+    margin: 40px auto;
+    padding: 35px 24px;
+    max-width: 1100px;
+    background: #F4F6F9;
+    border: 1px solid #e2e6ec;
+    border-top: 3px solid #C9A44C;
+    border-radius: 14px;
+}
+
+/* Tablettes */
+@media (max-width: 1000px) {
+    .why-us-container,
+    .steps-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .vehicles-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Téléphones */
+@media (max-width: 600px) {
+    .why-us,
+    .how-it-works,
+    #vehicules {
+        padding: 32px 16px;
+    }
+
+    .why-us-container,
+    .steps-container,
+    .vehicles-container {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 18px;
+    }
+
+    .why-us-card,
+    .step,
+    .vehicle {
+        padding: 18px;
+    }
+
+    .vehicle img {
+        height: 220px;
+    }
+}
