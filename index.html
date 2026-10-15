@@ -737,18 +737,14 @@ try {
 
     card.append(title, description, price);
 
-    const details = document.createElement("a");
-    details.className = "vehicle-whatsapp";
-    details.href =
-      "https://wa.me/34682879855?text=" +
-      encodeURIComponent(
-        "Bonjour, je souhaite voir le véhicule " + (vehicle.title || "") + "."
-      );
-    details.target = "_blank";
-    details.rel = "noopener noreferrer";
-    details.textContent = "Voir le véhicule";
+    
+const details = document.createElement("a");
+details.className = "vehicle-details-button";
+details.href =
+  "vehicule.html?id=" + encodeURIComponent(vehicle.id);
+details.textContent = "Voir le véhicule";
 
-    card.appendChild(details);
+card.appendChild(details);
 
     const contact = document.createElement("a");
     contact.className = "vehicle-whatsapp";
