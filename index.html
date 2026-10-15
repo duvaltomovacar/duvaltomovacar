@@ -738,6 +738,9 @@ if (images.length > 0) {
 
   card.appendChild(img);
 }
+ card.style.width = "100%";
+card.style.boxSizing = "border-box";
+      
     card.append(title, description, price);
 
 const details = document.createElement("a");
