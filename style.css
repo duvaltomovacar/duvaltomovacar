@@ -2200,3 +2200,14 @@ a:hover {
 .vehicle-detail-info .vehicle-price-detail {
     color: #B58A2A !important;
 }
+
+.vehicle-details-button {
+  display: inline-block;
+  background: #0b3d91;
+  color: #ffffff !important;
+  text-decoration: none;
+  padding: 12px 18px;
+  margin: 8px 6px;
+  border-radius: 6px;
+  font-weight: bold;
+}
