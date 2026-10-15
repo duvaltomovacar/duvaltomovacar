@@ -849,3 +849,14 @@ body {
         border-radius: 14px;
     }
 }
+
+/* Fond général professionnel */
+body {
+    background-color: #F3F5F8;
+    color: #0B1F3A;
+}
+
+/* Titres du site */
+h1, h2, h3 {
+    color: #0B1F3A;
+}
