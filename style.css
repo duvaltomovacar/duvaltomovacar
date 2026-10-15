@@ -860,3 +860,55 @@ body {
 h1, h2, h3 {
     color: #0B1F3A;
 }
+
+/* Bannière premium DUVAL TOMOVA CAR */
+.home-hero {
+    background-color: #0B1F3A;
+    padding: 45px 0;
+}
+
+.home-hero .hero-overlay {
+    box-sizing: border-box;
+    width: min(1100px, 92%);
+    margin: 0 auto;
+    padding: 45px 35px;
+    background-color: #0B1F3A;
+    border: 2px solid #C9A44C;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.18);
+}
+
+.home-hero .hero-content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.home-hero .hero-content h1,
+.home-hero .hero-content h2,
+.home-hero .hero-content p {
+    color: #FFFFFF;
+}
+
+.home-hero .hero-content h1 {
+    margin-bottom: 18px;
+}
+
+.home-hero .hero-content h2 {
+    margin-bottom: 16px;
+}
+
+.home-hero .hero-content p {
+    line-height: 1.8;
+}
+
+/* Adaptation aux téléphones */
+@media (max-width: 600px) {
+    .home-hero {
+        padding: 25px 0;
+    }
+
+    .home-hero .hero-overlay {
+        padding: 28px 18px;
+    }
+}
