@@ -2211,3 +2211,486 @@ a:hover {
   border-radius: 6px;
   font-weight: bold;
 }
+/* =====================================================
+   DUVAL TOMOVA CAR — DESIGN PREMIUM / LUXE
+   Couleurs : bleu nuit, or et blanc perle
+   À ajouter tout en bas de style.css
+   ===================================================== */
+
+:root {
+    --lux-navy: #0B1F3A;
+    --lux-blue: #12345A;
+    --lux-gold: #C9A44C;
+    --lux-gold-light: #E3CA82;
+    --lux-white: #FFFFFF;
+    --lux-bg: #F5F6F8;
+    --lux-text: #243247;
+    --lux-muted: #657186;
+    --lux-border: #E2E6EC;
+    --lux-shadow: 0 10px 30px rgba(11, 31, 58, 0.09);
+}
+
+/* BASE GÉNÉRALE */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+body {
+    margin: 0;
+    color: var(--lux-text);
+    background: var(--lux-white);
+    font-family: "Segoe UI", Arial, sans-serif;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1, h2, h3, h4 {
+    color: var(--lux-navy);
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+}
+
+p {
+    color: var(--lux-muted);
+}
+
+/* NAVIGATION PREMIUM */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px 24px;
+    min-height: 74px;
+    padding: 12px clamp(16px, 4vw, 56px);
+    box-sizing: border-box;
+    background: var(--lux-navy);
+    border-bottom: 2px solid var(--lux-gold);
+    box-shadow: 0 5px 20px rgba(11, 31, 58, 0.14);
+}
+
+.logo {
+    color: var(--lux-white);
+    font-size: clamp(17px, 2vw, 24px);
+    font-weight: 800;
+    letter-spacing: 0.06em;
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px 20px;
+}
+
+.nav-links a {
+    color: var(--lux-white);
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover,
+.nav-links a:focus-visible {
+    color: var(--lux-gold-light);
+}
+
+.language-selector {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 5px;
+}
+
+.language-selector button {
+    padding: 6px 9px;
+    color: var(--lux-white);
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.28);
+    border-radius: 5px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.language-selector button:hover,
+.language-selector button.active {
+    color: var(--lux-navy);
+    background: var(--lux-gold);
+    border-color: var(--lux-gold);
+}
+
+/* BOUTONS */
+.btn-primary,
+.vehicle-button,
+.vehicle-details-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 11px 18px;
+    color: var(--lux-white);
+    background: var(--lux-navy);
+    border: 1px solid var(--lux-navy);
+    border-radius: 6px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform 0.2s ease,
+                background 0.2s ease,
+                border-color 0.2s ease;
+}
+
+.btn-primary:hover,
+.vehicle-button:hover,
+.vehicle-details-button:hover {
+    color: var(--lux-navy);
+    background: var(--lux-gold);
+    border-color: var(--lux-gold);
+    transform: translateY(-2px);
+}
+
+.btn-whatsapp,
+.vehicle-whatsapp,
+.whatsapp-button,
+.footer-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 11px 18px;
+    color: var(--lux-white);
+    background: #168653;
+    border: 1px solid #168653;
+    border-radius: 6px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.btn-whatsapp:hover,
+.vehicle-whatsapp:hover,
+.whatsapp-button:hover,
+.footer-whatsapp:hover {
+    background: #116C42;
+    transform: translateY(-2px);
+}
+
+/* SECTIONS */
+section {
+    scroll-margin-top: 100px;
+}
+
+.contact-section,
+.about-section,
+.services-section {
+    padding: clamp(40px, 6vw, 80px) clamp(16px, 5vw, 64px);
+}
+
+.contact-section {
+    background: var(--lux-bg);
+    border-top: 1px solid var(--lux-border);
+}
+
+.contact-section h2,
+.about-section h2,
+.services-section h2 {
+    margin-top: 0;
+    font-size: clamp(26px, 3vw, 38px);
+}
+
+/* CATALOGUE : CARTES UNIFORMES */
+.vehicles-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr));
+    align-items: stretch;
+    gap: 24px;
+    width: 100%;
+    max-width: 1300px;
+    margin: 28px auto;
+    padding: 0 16px;
+    box-sizing: border-box;
+}
+
+.vehicle,
+.vehicle-card {
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+    margin: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    background: var(--lux-white);
+    border: 1px solid var(--lux-border);
+    border-radius: 10px;
+    box-shadow: var(--lux-shadow);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.vehicle:hover,
+.vehicle-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 36px rgba(11, 31, 58, 0.14);
+}
+
+.vehicle img,
+.vehicle-card img {
+    display: block;
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 0;
+    margin: 0;
+}
+
+.vehicle h3,
+.vehicle-card h3 {
+    margin: 14px 14px 6px;
+    color: var(--lux-navy);
+    font-size: 18px;
+}
+
+.vehicle p {
+    margin: 7px 14px;
+    font-size: 13px;
+    overflow-wrap: anywhere;
+}
+
+.vehicle strong,
+.vehicle-price {
+    color: #9A741F;
+}
+
+.vehicle .vehicle-button,
+.vehicle .vehicle-details-button,
+.vehicle .vehicle-whatsapp {
+    margin: 8px 12px 12px;
+    max-width: calc(100% - 24px);
+    text-align: center;
+}
+
+/* FICHES DÉTAILLÉES */
+.vehicle-page {
+    width: 100%;
+    max-width: 1160px;
+    margin: 36px auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.vehicle-detail {
+    overflow: hidden;
+    background: var(--lux-white);
+    border: 1px solid var(--lux-border);
+    border-radius: 14px;
+    box-shadow: var(--lux-shadow);
+}
+
+.vehicle-main-image {
+    display: block;
+    width: 100%;
+    max-height: 560px;
+    object-fit: cover;
+}
+
+.vehicle-detail-info {
+    padding: clamp(20px, 4vw, 42px);
+}
+
+.vehicle-detail-info h2 {
+    color: var(--lux-navy);
+    font-size: clamp(27px, 4vw, 40px);
+}
+
+.vehicle-price-detail {
+    color: #9A741F;
+    font-weight: 800;
+}
+
+.vehicle-details-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 12px;
+}
+
+.vehicle-details-grid div {
+    background: var(--lux-bg);
+    border: 1px solid var(--lux-border);
+    border-radius: 8px;
+}
+
+/* EN-TÊTES DES PAGES INTÉRIEURES */
+.site-header {
+    padding: clamp(32px, 5vw, 64px) 20px;
+    background: linear-gradient(135deg, var(--lux-navy), var(--lux-blue));
+    border-bottom: 3px solid var(--lux-gold);
+    text-align: center;
+}
+
+.site-header h1,
+.site-header h2,
+.site-header p {
+    color: var(--lux-white);
+}
+
+/* PIED DE PAGE */
+.main-footer {
+    padding-top: 42px;
+    color: #E8EDF4;
+    background: #081629;
+    border-top: 3px solid var(--lux-gold);
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 30px;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 clamp(18px, 4vw, 48px) 32px;
+    box-sizing: border-box;
+}
+
+.main-footer h3 {
+    color: var(--lux-gold-light);
+}
+
+.main-footer p,
+.main-footer a {
+    color: #D0D8E4;
+}
+
+.main-footer a {
+    text-decoration: none;
+}
+
+.main-footer a:hover {
+    color: var(--lux-gold-light);
+}
+
+.footer-bottom {
+    padding: 16px;
+    border-top: 1px solid rgba(255,255,255,0.12);
+    text-align: center;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 13px;
+}
+
+/* ACCESSIBILITÉ */
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid var(--lux-gold);
+    outline-offset: 3px;
+}
+
+/* MOBILE ET TABLETTE */
+@media (max-width: 900px) {
+    .navbar {
+        justify-content: center;
+    }
+
+    .nav-links {
+        justify-content: center;
+        gap: 10px 14px;
+    }
+
+    .language-selector {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        position: relative;
+        padding: 14px;
+    }
+
+    .nav-links {
+        width: 100%;
+        gap: 10px 12px;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+    }
+
+    .vehicles-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+        padding: 0 10px;
+    }
+
+    .vehicle img,
+    .vehicle-card img {
+        height: 120px;
+    }
+
+    .vehicle h3,
+    .vehicle-card h3 {
+        margin: 10px 10px 5px;
+        font-size: 15px;
+    }
+
+    .vehicle p {
+        margin: 6px 10px;
+        font-size: 12px;
+    }
+
+    .vehicle .vehicle-button,
+    .vehicle .vehicle-details-button,
+    .vehicle .vehicle-whatsapp {
+        margin: 6px 8px 10px;
+        max-width: calc(100% - 16px);
+        padding: 9px 10px;
+        font-size: 12px;
+    }
+
+    .vehicle-detail-info {
+        padding: 20px;
+    }
+
+    .vehicle-details-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .footer-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+    }
+}
+
+@media (max-width: 360px) {
+    .vehicles-container {
+        grid-template-columns: 1fr;
+    }
+
+    .vehicle .vehicle-button,
+    .vehicle .vehicle-details-button,
+    .vehicle .vehicle-whatsapp {
+        width: calc(100% - 16px);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+}
