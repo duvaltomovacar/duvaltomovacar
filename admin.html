@@ -119,80 +119,74 @@
     const button = document.getElementById("publish-button");
     const statusBox = document.getElementById("status");
 
-    form.addEventListener("submit", async (event) => {
-      event.preventDefault();
+   
+form.addEventListener("submit", async (event) => {
+  event.preventDefault();
 
-      button.disabled = true;
-      statusBox.textContent = "Publication en cours…";
+  button.disabled = true;
+  statusBox.textContent = "Publication en cours…";
 
-      
-const files = Array.from(document.getElementById("images").files);
+  try {
+    const files = Array.from(document.getElementById("images").files);
 
-if (files.length > 6) {
-  statusBox.textContent = "Choisis au maximum 6 photos.";
-  button.disabled = false;
-  return;
-}
+    if (files.length > 6) {
+      throw new Error("Choisis au maximum 6 photos.");
+    }
 
-const images = await Promise.all(files.map(file => new Promise((resolve, reject) => {
-  if (file.size > 1_000_000) {
-    reject(new Error(`La photo "${file.name}" dépasse 1 Mo.`));
-    return;
-  }
-
-  if (!["image/jpeg", "image/png", "image/webp"].includes(file.type)) {
-    reject(new Error(`Format non accepté : ${file.name}`));
-    return;
-  }
-
-  const reader = new FileReader();
-  reader.onload = () => resolve({
-    name: file.name,
-    type: file.type,
-    data: reader.result.split(",")[1]
-  });
-  reader.onerror = () => reject(new Error("Impossible de lire une photo."));
-  reader.readAsDataURL(file);
-})));
-        .split(/\r?\n/)
-        .map(path => path.trim())
-        .filter(Boolean);
-
-      const vehicle = {
-        title: document.getElementById("title").value.trim(),
-        price: Number(document.getElementById("price").value),
-        description: document.getElementById("description").value.trim(),
-        images
-      };
-
-      try {
-        const response = await fetch(API_URL, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            "Authorization":
-              "Bearer " + document.getElementById("admin-secret").value
-          },
-          body: JSON.stringify(vehicle)
-        });
-
-        const result = await response.json();
-
-        if (!response.ok) {
-          throw new Error(result.error || "La publication a échoué.");
-        }
-
-        statusBox.textContent =
-          "Véhicule enregistré dans GitHub. L’affichage sur le site dépend de l’intégration du catalogue.";
-        form.reset();
-      } catch (error) {
-        statusBox.textContent =
-          "Erreur : " + error.message +
-          "\nVérifie la configuration du Worker et réessaie.";
-      } finally {
-        button.disabled = false;
+    const images = await Promise.all(files.map(file => new Promise((resolve, reject) => {
+      if (file.size > 1_000_000) {
+        reject(new Error(`La photo "${file.name}" dépasse 1 Mo.`));
+        return;
       }
+
+      if (!["image/jpeg", "image/png", "image/webp"].includes(file.type)) {
+        reject(new Error(`Format non accepté : ${file.name}`));
+        return;
+      }
+
+      const reader = new FileReader();
+      reader.onload = () => resolve({
+        name: file.name,
+        type: file.type,
+        data: reader.result.split(",")[1]
+      });
+      reader.onerror = () => reject(new Error("Impossible de lire une photo."));
+      reader.readAsDataURL(file);
+    })));
+
+    const vehicle = {
+      title: document.getElementById("title").value.trim(),
+      price: Number(document.getElementById("price").value),
+      description: document.getElementById("description").value.trim(),
+      images
+    };
+
+    const response = await fetch(API_URL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": "Bearer " +
+          document.getElementById("admin-secret").value
+      },
+      body: JSON.stringify(vehicle)
     });
+
+    const result = await response.json();
+
+    if (!response.ok) {
+      throw new Error(result.error || "La publication a échoué.");
+    }
+
+    statusBox.textContent = "Véhicule et photos enregistrés dans GitHub.";
+    form.reset();
+    document.getElementById("image-preview").replaceChildren();
+
+  } catch (error) {
+    statusBox.textContent = "Erreur : " + error.message;
+  } finally {
+    button.disabled = false;
+  }
+});
   </script>
 </body>
 </html>
