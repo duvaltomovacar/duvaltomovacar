@@ -125,7 +125,35 @@
       button.disabled = true;
       statusBox.textContent = "Publication en cours…";
 
-      const images = document.getElementById("images").value
+      
+const files = Array.from(document.getElementById("images").files);
+
+if (files.length > 6) {
+  statusBox.textContent = "Choisis au maximum 6 photos.";
+  button.disabled = false;
+  return;
+}
+
+const images = await Promise.all(files.map(file => new Promise((resolve, reject) => {
+  if (file.size > 1_000_000) {
+    reject(new Error(`La photo "${file.name}" dépasse 1 Mo.`));
+    return;
+  }
+
+  if (!["image/jpeg", "image/png", "image/webp"].includes(file.type)) {
+    reject(new Error(`Format non accepté : ${file.name}`));
+    return;
+  }
+
+  const reader = new FileReader();
+  reader.onload = () => resolve({
+    name: file.name,
+    type: file.type,
+    data: reader.result.split(",")[1]
+  });
+  reader.onerror = () => reject(new Error("Impossible de lire une photo."));
+  reader.readAsDataURL(file);
+})));
         .split(/\r?\n/)
         .map(path => path.trim())
         .filter(Boolean);
