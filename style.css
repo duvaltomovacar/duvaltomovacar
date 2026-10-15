@@ -756,3 +756,53 @@ body {
         height: 220px;
     }
 }
+
+/* Cadres des services sous la bannière */
+.hero-services {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+    width: min(1100px, 92%);
+    margin: 30px auto;
+}
+
+.hero-service {
+    box-sizing: border-box;
+    padding: 22px 18px;
+    background: #ffffff;
+    border: 1px solid #d9e0e8;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(11, 31, 58, 0.08);
+    text-align: center;
+    color: #0b1f3a;
+    line-height: 1.6;
+}
+
+.hero-service h3 {
+    margin: 0 0 8px;
+    color: #0b1f3a;
+    font-size: 17px;
+}
+
+.hero-service p {
+    margin: 0;
+    color: #4b5563;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .hero-services {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .hero-service {
+        padding: 16px 12px;
+    }
+}
+
+@media (max-width: 420px) {
+    .hero-services {
+        grid-template-columns: 1fr;
+    }
+}
