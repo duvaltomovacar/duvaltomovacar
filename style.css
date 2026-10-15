@@ -1072,3 +1072,52 @@ h1, h2, h3 {
         grid-template-columns: 1fr;
     }
 }
+
+/* Pied de page premium */
+.main-footer {
+    background-color: #0B1F3A;
+    color: #FFFFFF;
+    padding: 45px 20px 20px;
+    border-top: 3px solid #C9A44C;
+}
+
+.main-footer h3,
+.main-footer h4 {
+    color: #C9A44C;
+}
+
+.main-footer p,
+.main-footer li {
+    color: #E2E8F0;
+    line-height: 1.8;
+}
+
+.main-footer a {
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.main-footer a:hover {
+    color: #C9A44C;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    margin-top: 25px;
+    padding-top: 18px;
+    text-align: center;
+}
+
+.footer-whatsapp {
+    display: inline-block;
+    background-color: #25D366;
+    color: #FFFFFF !important;
+    padding: 11px 18px;
+    border-radius: 8px;
+    font-weight: 700;
+}
+
+.footer-whatsapp:hover {
+    background-color: #128C7E;
+}
