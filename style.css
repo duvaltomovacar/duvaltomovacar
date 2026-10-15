@@ -806,3 +806,46 @@ body {
         grid-template-columns: 1fr;
     }
 }
+
+/* Grand cadre de la bannière d'accueil */
+.home-hero .hero-overlay {
+    box-sizing: border-box;
+    width: min(1100px, 92%);
+    margin: 35px auto;
+    padding: 45px 40px;
+    background: #ffffff;
+    border: 2px solid #c9a44c;
+    border-radius: 18px;
+    box-shadow: 0 8px 28px rgba(11, 31, 58, 0.12);
+}
+
+/* Contenu de la bannière */
+.home-hero .hero-content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.home-hero .hero-content h1 {
+    color: #0b1f3a;
+}
+
+.home-hero .hero-content h2 {
+    color: #0b1f3a;
+    margin-bottom: 16px;
+}
+
+.home-hero .hero-content p {
+    color: #4b5563;
+    line-height: 1.8;
+}
+
+/* Adaptation aux téléphones */
+@media (max-width: 600px) {
+    .home-hero .hero-overlay {
+        width: 94%;
+        margin: 20px auto;
+        padding: 28px 18px;
+        border-radius: 14px;
+    }
+}
