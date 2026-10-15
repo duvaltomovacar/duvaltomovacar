@@ -94,9 +94,11 @@
       <textarea id="description" name="description"
                 placeholder="Année, kilométrage, motorisation, état…"></textarea>
 
-      <label for="images">Chemins des photos déjà hébergées</label>
-      <textarea id="images" name="images"
-        placeholder="/images/voiture-1.jpg&#10;/images/voiture-2.jpg"></textarea>
+<label for="images">Photos du véhicule</label>
+<input id="images" name="images" type="file"
+       accept="image/jpeg,image/png,image/webp" multiple>
+<div id="image-preview"
+     style="display:flex;flex-wrap:wrap;gap:10px;margin-top:12px"></div>
 
       <p class="notice">
         Pour cette première version, les photos doivent déjà être présentes
