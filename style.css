@@ -912,3 +912,41 @@ h1, h2, h3 {
         padding: 28px 18px;
     }
 }
+
+/* Boutons premium DUVAL TOMOVA CAR */
+.hero-content a,
+.vehicle-button,
+.vehicle-details-button {
+    display: inline-block;
+    background-color: #C9A44C;
+    color: #0B1F3A !important;
+    border: 1px solid #C9A44C;
+    border-radius: 8px;
+    padding: 13px 22px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background-color 0.25s ease,
+                color 0.25s ease,
+                transform 0.25s ease;
+}
+
+.hero-content a:hover,
+.vehicle-button:hover,
+.vehicle-details-button:hover {
+    background-color: #0B1F3A;
+    color: #FFFFFF !important;
+    transform: translateY(-2px);
+}
+
+/* Bouton WhatsApp : conserver le vert reconnaissable */
+.vehicle-whatsapp {
+    background-color: #25D366;
+    color: #FFFFFF !important;
+    border: 1px solid #25D366;
+    border-radius: 8px;
+}
+
+.vehicle-whatsapp:hover {
+    background-color: #128C7E;
+    color: #FFFFFF !important;
+}
