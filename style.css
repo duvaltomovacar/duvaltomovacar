@@ -1137,3 +1137,46 @@ body {
 .main-footer {
     margin-bottom: 0 !important;
 }
+
+/* CADRE PREMIUM - PAGE À PROPOS */
+.about-hero {
+    background: #0B1F3A;
+    border: 2px solid #C9A44C;
+    border-radius: 16px;
+    padding: 40px 30px;
+    margin: 35px auto;
+    max-width: 1100px;
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(11, 31, 58, 0.15);
+    box-sizing: border-box;
+}
+
+.about-hero .about-label {
+    color: #C9A44C;
+    font-weight: bold;
+    margin-bottom: 18px;
+}
+
+.about-hero h1 {
+    color: #FFFFFF;
+    margin-bottom: 20px;
+}
+
+.about-hero h2 {
+    color: #FFFFFF;
+    margin-bottom: 18px;
+}
+
+.about-hero p {
+    color: #FFFFFF;
+    line-height: 1.8;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+@media (max-width: 600px) {
+    .about-hero {
+        margin: 20px 12px;
+        padding: 28px 18px;
+    }
+}
