@@ -88,5 +88,20 @@
       "/images/vehicles/5441e709-35ec-487b-82f5-e4e0038eaadf/854169757_122135141595315458_6794529267011670140_n-6.jpg"
     ],
     "publishedAt": "2026-10-16T15:53:42.126Z"
+  },
+  {
+    "id": "3f3d7fad-4346-4b0d-abba-41103f1a3784",
+    "title": "Mercedes-Benz Vito",
+    "price": 8000,
+    "description": "🇩🇪  – Mercedes-Benz Vito 🚐\n📅 Año: 2017\n📊 Kilometraje: 194.000 km\n⚡ Potencia: 190 CV\n⛽ Combustible: Diésel\n⚙ Transmisión: Automática\n🛞 Tracción: Delantera\n🚪 Puertas: 4\n💺 Plazas: 3\n🎨 Color: Blanco",
+    "images": [
+      "/images/vehicles/3f3d7fad-4346-4b0d-abba-41103f1a3784/849042393_122194642430931509_4766411302853497609_n-1.jpg",
+      "/images/vehicles/3f3d7fad-4346-4b0d-abba-41103f1a3784/849380880_122194642424931509_8895299493045071680_n-2.jpg",
+      "/images/vehicles/3f3d7fad-4346-4b0d-abba-41103f1a3784/850588071_122194642490931509_5837460387436925165_n-3.jpg",
+      "/images/vehicles/3f3d7fad-4346-4b0d-abba-41103f1a3784/850961276_122194642718931509_6895722175958561399_n-4.jpg",
+      "/images/vehicles/3f3d7fad-4346-4b0d-abba-41103f1a3784/851079543_122194642736931509_5574585553790035848_n-5.jpg",
+      "/images/vehicles/3f3d7fad-4346-4b0d-abba-41103f1a3784/851504596_122194642418931509_2555529036772988033_n-6.jpg"
+    ],
+    "publishedAt": "2026-10-16T16:29:16.992Z"
   }
 ]
