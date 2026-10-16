@@ -1126,3 +1126,14 @@ h1, h2, h3 {
 body::after {
     content: none !important;
 }
+
+/* Supprimer l'espace parasite sous le pied de page */
+html,
+body {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+.main-footer {
+    margin-bottom: 0 !important;
+}
