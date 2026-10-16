@@ -1121,3 +1121,8 @@ h1, h2, h3 {
 .footer-whatsapp:hover {
     background-color: #128C7E;
 }
+
+/* Masquer les éventuels marqueurs décoratifs en bas de page */
+body::after {
+    content: none !important;
+}
