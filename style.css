@@ -1499,3 +1499,33 @@ body::after {
     font-size: 13px;
     margin-top: 8px;
 }
+
+/* ALIGNER LES VOITURES PUBLIÉES CÔTE À CÔTE */
+#published-vehicles {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    align-items: start;
+}
+
+#published-vehicles .vehicle {
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* ADAPTATION AUX PETITS ÉCRANS */
+@media (max-width: 768px) {
+    #published-vehicles {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    #published-vehicles {
+        grid-template-columns: 1fr;
+    }
+}
