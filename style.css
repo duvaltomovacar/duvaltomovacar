@@ -1562,18 +1562,3 @@ body::after {
     font-size: 11px;
     margin-top: 6px;
 }
-
-/* CADRES DE VOITURES PLUS ÉTROITS */
-#published-vehicles {
-    grid-template-columns: repeat(3, minmax(0, 180px)) !important;
-    justify-content: center !important;
-    gap: 10px !important;
-}
-
-#published-vehicles .vehicle {
-    width: 180px !important;
-    max-width: 180px !important;
-    min-width: 0 !important;
-    padding: 6px !important;
-    box-sizing: border-box !important;
-}
