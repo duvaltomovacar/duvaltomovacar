@@ -1418,3 +1418,56 @@ body::after {
     pointer-events: none;
     z-index: 1;
 }
+
+/* CARTES DES VOITURES PUBLIÉES AUTOMATIQUEMENT */
+#published-vehicles .vehicle {
+    background: #111214;
+    color: #FFFFFF;
+    border: 1px solid #C99A52;
+    border-radius: 14px;
+    padding: 18px;
+    margin-bottom: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+    overflow: hidden;
+}
+
+#published-vehicles .vehicle h3 {
+    color: #E3CA82;
+    font-size: 22px;
+    margin: 12px 0;
+}
+
+#published-vehicles .vehicle p {
+    color: #FFFFFF;
+    line-height: 1.6;
+}
+
+#published-vehicles .vehicle img {
+    border: 1px solid rgba(201, 154, 82, 0.5);
+}
+
+#published-vehicles .vehicle-details-button,
+#published-vehicles .vehicle-whatsapp {
+    display: block;
+    text-align: center;
+    padding: 12px;
+    margin-top: 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#published-vehicles .vehicle-details-button {
+    background: #C99A52;
+    color: #08090B;
+}
+
+#published-vehicles .vehicle-whatsapp {
+    background: #168A49;
+    color: #FFFFFF;
+}
+
+#published-vehicles .vehicle-details-button:hover,
+#published-vehicles .vehicle-whatsapp:hover {
+    opacity: 0.85;
+}
