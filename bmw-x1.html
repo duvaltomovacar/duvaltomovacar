@@ -16,6 +16,52 @@
     }
 </style>
 
+<style>
+    .vehicle-actions-frame {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        margin: 30px 0;
+        padding: 20px;
+        background: #17191D;
+        border: 1px solid #C99A52;
+        border-radius: 14px;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+    }
+
+    .vehicle-actions-frame a {
+        display: inline-block;
+        padding: 12px 20px;
+        border-radius: 10px;
+        font-weight: bold;
+        text-decoration: none;
+        text-align: center;
+    }
+
+    .vehicle-actions-frame .contact-button {
+        background: #20C969;
+        color: #FFFFFF;
+    }
+
+    .vehicle-actions-frame .back-button {
+        background: #08090B;
+        color: #C99A52;
+        border: 1px solid #C99A52;
+    }
+
+    @media (max-width: 600px) {
+        .vehicle-actions-frame {
+            flex-direction: column;
+        }
+
+        .vehicle-actions-frame a {
+            width: 100%;
+            box-sizing: border-box;
+        }
+    }
+</style>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
