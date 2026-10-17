@@ -1529,3 +1529,36 @@ body::after {
         grid-template-columns: 1fr;
     }
 }
+
+/* CADRES AUTOMATIQUES ENCORE PLUS COMPACTS */
+#published-vehicles {
+    gap: 12px;
+}
+
+#published-vehicles .vehicle {
+    padding: 8px;
+    border-radius: 10px;
+}
+
+#published-vehicles .vehicle img {
+    height: 110px !important;
+    margin-bottom: 6px !important;
+}
+
+#published-vehicles .vehicle h3 {
+    font-size: 16px;
+    margin: 6px 0;
+}
+
+#published-vehicles .vehicle p {
+    font-size: 12px;
+    line-height: 1.4;
+    margin: 5px 0;
+}
+
+#published-vehicles .vehicle-details-button,
+#published-vehicles .vehicle-whatsapp {
+    padding: 7px 5px;
+    font-size: 11px;
+    margin-top: 6px;
+}
