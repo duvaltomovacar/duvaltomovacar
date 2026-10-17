@@ -1471,3 +1471,31 @@ body::after {
 #published-vehicles .vehicle-whatsapp:hover {
     opacity: 0.85;
 }
+
+/* CADRES PLUS PETITS POUR LES VOITURES PUBLIÉES */
+#published-vehicles .vehicle {
+    max-width: 300px;
+    padding: 12px;
+    margin: 0 auto 20px;
+}
+
+#published-vehicles .vehicle img {
+    height: 150px !important;
+}
+
+#published-vehicles .vehicle h3 {
+    font-size: 18px;
+    margin: 8px 0;
+}
+
+#published-vehicles .vehicle p {
+    font-size: 14px;
+    margin: 8px 0;
+}
+
+#published-vehicles .vehicle-details-button,
+#published-vehicles .vehicle-whatsapp {
+    padding: 9px;
+    font-size: 13px;
+    margin-top: 8px;
+}
