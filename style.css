@@ -1381,3 +1381,20 @@ footer {
         padding-right: 12px;
     }
 }
+
+/* COMMENT ÇA MARCHE : CARTES BLANCHES */
+.steps-container .step {
+    background: #FFFFFF !important;
+    color: #17191D !important;
+    border: 1px solid #C99A52 !important;
+    border-radius: 12px;
+    box-shadow: 0 5px 16px rgba(0, 0, 0, 0.18);
+}
+
+.steps-container .step h3,
+.steps-container .step h4,
+.steps-container .step p,
+.steps-container .step span,
+.steps-container .step strong {
+    color: #17191D !important;
+}
