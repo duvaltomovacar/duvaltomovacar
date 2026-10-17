@@ -1180,3 +1180,81 @@ body {
         padding: 28px 18px;
     }
 }
+
+/* =====================================
+   CADRE PROFESSIONNEL DES VOITURES
+   DUVAL TOMOVA CAR
+===================================== */
+
+.vehicle-details-grid > div {
+    background: #17191D !important;
+    color: #FFFFFF !important;
+    border: 1px solid rgba(201, 154, 82, 0.65);
+    border-radius: 10px;
+    padding: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    transition: border-color 0.25s ease,
+                transform 0.25s ease;
+}
+
+.vehicle-details-grid > div:hover {
+    border-color: #E3CA82;
+    transform: translateY(-2px);
+}
+
+.vehicle-details-grid strong,
+.vehicle-details-grid span {
+    color: #FFFFFF !important;
+}
+
+.vehicle-actions-frame {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin: 30px 0;
+    padding: 22px;
+    background: #17191D;
+    border: 1px solid #C99A52;
+    border-radius: 14px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+.vehicle-actions-frame a {
+    display: inline-block;
+    padding: 13px 22px;
+    border-radius: 9px;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    transition: transform 0.2s ease,
+                opacity 0.2s ease;
+}
+
+.vehicle-actions-frame a:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+.vehicle-actions-frame .contact-button {
+    background: #20C969;
+    color: #FFFFFF !important;
+}
+
+.vehicle-actions-frame .back-button {
+    background: #08090B;
+    color: #E3CA82 !important;
+    border: 1px solid #C99A52;
+}
+
+@media (max-width: 600px) {
+    .vehicle-actions-frame {
+        flex-direction: column;
+    }
+
+    .vehicle-actions-frame a {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
