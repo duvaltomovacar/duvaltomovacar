@@ -1580,3 +1580,29 @@ body::after {
 .vehicle p strong {
     color: #FFFFFF !important;
 }
+
+/* RÉDUIRE LES TROIS PREMIÈRES VOITURES */
+#vehicules > .vehicle,
+#vehicles > .vehicle {
+    padding: 8px !important;
+    box-sizing: border-box;
+}
+
+#vehicules > .vehicle img,
+#vehicles > .vehicle img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+#vehicules > .vehicle h3,
+#vehicles > .vehicle h3 {
+    font-size: 18px;
+    margin: 8px 0;
+}
+
+#vehicules > .vehicle p,
+#vehicles > .vehicle p {
+    font-size: 13px;
+    margin: 6px 0;
+}
