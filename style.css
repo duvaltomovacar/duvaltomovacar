@@ -1610,13 +1610,14 @@ body::after {
 /* BMW X1, MERCEDES GLC ET AUDI RS3 : STYLE COMPACT */
 #vehicules .vehicle,
 #vehicles .vehicle {
-    height: 285px !important;
+    height: auto !important;
+    min-height: 285px;
     padding: 8px !important;
     box-sizing: border-box !important;
     background: #17191D !important;
     border: 1px solid #C99A52 !important;
     border-radius: 8px !important;
-    overflow: hidden;
+    overflow: visible !important;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
 }
 
