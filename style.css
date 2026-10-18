@@ -1562,3 +1562,21 @@ body::after {
     font-size: 11px;
     margin-top: 6px;
 }
+
+/* MÊME COULEUR POUR TOUS LES CADRES DE VOITURES */
+.vehicle {
+    background-color: #17191D !important;
+    border: 1px solid #C99A52 !important;
+    border-radius: 14px;
+    color: #FFFFFF;
+    box-shadow: 0 5px 16px rgba(0, 0, 0, 0.30);
+}
+
+.vehicle h3 {
+    color: #E3CA82 !important;
+}
+
+.vehicle p,
+.vehicle p strong {
+    color: #FFFFFF !important;
+}
