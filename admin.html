@@ -1,192 +1,198 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Administration | DUVAL TOMOVA CAR</title>
   <style>
     * { box-sizing: border-box; }
-
     body {
-      margin: 0;
-      padding: 24px;
-      font-family: Arial, sans-serif;
-      background: #f3f5f8;
-      color: #222;
+      margin: 0; padding: 20px; font-family: Arial, sans-serif;
+      background: #f3f5f8; color: #222;
     }
-
-    .container {
-      max-width: 760px;
-      margin: 30px auto;
-      padding: 28px;
-      background: white;
-      border-radius: 12px;
+    main {
+      max-width: 760px; margin: 20px auto; padding: 25px;
+      background: white; border-radius: 12px;
       box-shadow: 0 4px 20px #00000012;
     }
-
     h1 { margin-top: 0; }
     label { display: block; margin-top: 18px; font-weight: bold; }
-
-    input, textarea, button {
-      width: 100%;
-      margin-top: 8px;
-      padding: 12px;
-      border-radius: 6px;
-      font-size: 16px;
+    input, textarea, select, button {
+      width: 100%; margin-top: 8px; padding: 12px;
+      border-radius: 6px; font-size: 16px;
     }
-
-    input, textarea {
-      border: 1px solid #ccc;
-    }
-
-    textarea {
-      min-height: 110px;
-      resize: vertical;
-    }
-
+    input, textarea, select { border: 1px solid #ccc; }
+    textarea { min-height: 120px; resize: vertical; }
     button {
-      border: 0;
-      background: #111827;
-      color: white;
-      font-weight: bold;
-      cursor: pointer;
+      border: 0; background: #111827; color: white;
+      font-weight: bold; cursor: pointer;
     }
-
-    button:disabled {
-      opacity: 0.6;
-      cursor: wait;
-    }
-
-    .notice {
-      padding: 12px;
-      background: #fff7db;
-      border-radius: 6px;
-      line-height: 1.5;
-    }
-
+    button:disabled { opacity: .6; cursor: wait; }
+    .notice { padding: 12px; background: #fff7db; border-radius: 6px; line-height: 1.5; }
     #status { margin-top: 18px; white-space: pre-wrap; }
+    .secondary { background: #596579; }
   </style>
 </head>
 <body>
-  <main class="container">
-    <h1>DUVAL TOMOVA CAR</h1>
-    <h2>Administration des véhicules</h2>
+<main>
+  <h1>DUVAL TOMOVA CAR</h1>
+  <h2>Gestion des véhicules</h2>
+
+  <p class="notice">
+    Saisis ton secret d’administration. Sélectionne une voiture pour charger
+    ses informations, puis modifie les champs souhaités.
+  </p>
+
+  <label for="admin-secret">Secret d’administration</label>
+  <input id="admin-secret" type="password" autocomplete="current-password" required>
+
+  <button type="button" id="load-button">Charger les véhicules</button>
+
+  <label for="vehicle-select">Voiture à modifier</label>
+  <select id="vehicle-select">
+    <option value="">Charge d’abord les véhicules</option>
+  </select>
+
+  <form id="vehicle-form">
+    <label for="title">Marque et modèle</label>
+    <input id="title" required>
+
+    <label for="price">Prix en euros (€)</label>
+    <input id="price" type="number" min="1" step="1" required>
+
+    <label for="description">Description</label>
+    <textarea id="description"></textarea>
 
     <p class="notice">
-      Espace de gestion. Utilise uniquement ton secret d’administration.
-      Cette page ne remplace pas une protection d’accès au site.
+      La modification des photos sera activée après la mise à jour du Worker.
+      Pour l’instant, ce formulaire ne remplace pas les photos existantes.
     </p>
 
-    <form id="vehicle-form">
-      <label for="admin-secret">Secret d’administration</label>
-      <input id="admin-secret" type="password"
-             autocomplete="current-password" required>
+    <button type="submit" id="save-button">Enregistrer les modifications</button>
+    <button type="button" class="secondary" id="clear-button">Effacer le formulaire</button>
+  </form>
 
-      <label for="title">Marque et modèle</label>
-      <input id="title" name="title"
-             placeholder="Ex. Mercedes-Benz GLC 220d" required>
+  <div id="status" role="status" aria-live="polite"></div>
+</main>
 
-      <label for="price">Prix en euros (€)</label>
-      <input id="price" name="price" type="number"
-             min="1" step="1" placeholder="25000" required>
+<script>
+const BASE_URL = "https://duvaltomova-publish.duvaltomovacar.workers.dev";
+const secretInput = document.getElementById("admin-secret");
+const select = document.getElementById("vehicle-select");
+const form = document.getElementById("vehicle-form");
+const statusBox = document.getElementById("status");
+const loadButton = document.getElementById("load-button");
+const saveButton = document.getElementById("save-button");
 
-      <label for="description">Description</label>
-      <textarea id="description" name="description"
-                placeholder="Année, kilométrage, motorisation, état…"></textarea>
+let vehicles = [];
+let selectedVehicle = null;
 
-<label for="images">Photos du véhicule</label>
-<input id="images" name="images" type="file"
-       accept="image/jpeg,image/png,image/webp" multiple>
-<div id="image-preview"
-     style="display:flex;flex-wrap:wrap;gap:10px;margin-top:12px"></div>
+function authHeaders() {
+  return {
+    "Content-Type": "application/json",
+    "Authorization": "Bearer " + secretInput.value
+  };
+}
 
-      <p class="notice">
-        Pour cette première version, les photos doivent déjà être présentes
-        sur le site. Le téléversement de nouvelles photos sera ajouté ensuite.
-      </p>
+function showStatus(message) {
+  statusBox.textContent = message;
+}
 
-      <button id="publish-button" type="submit">Publier le véhicule</button>
-    </form>
-
-    <div id="status" role="status" aria-live="polite"></div>
-  </main>
-
-  <script>
-    const API_URL =
-      "https://duvaltomova-publish.duvaltomovacar.workers.dev/api/publish";
-
-    const form = document.getElementById("vehicle-form");
-    const button = document.getElementById("publish-button");
-    const statusBox = document.getElementById("status");
-
-   
-form.addEventListener("submit", async (event) => {
-  event.preventDefault();
-
-  button.disabled = true;
-  statusBox.textContent = "Publication en cours…";
+async function loadVehicles() {
+  loadButton.disabled = true;
+  showStatus("Chargement des véhicules…");
 
   try {
-    const files = Array.from(document.getElementById("images").files);
+    const response = await fetch(`${BASE_URL}/api/vehicles`);
+    const result = await response.json();
 
-    if (files.length > 6) {
-      throw new Error("Choisis au maximum 6 photos.");
+    if (!response.ok || !Array.isArray(result.vehicles)) {
+      throw new Error(result.error || "Impossible de charger les véhicules.");
     }
 
-    const images = await Promise.all(files.map(file => new Promise((resolve, reject) => {
-      if (file.size > 1_000_000) {
-        reject(new Error(`La photo "${file.name}" dépasse 1 Mo.`));
-        return;
-      }
+    vehicles = result.vehicles;
+    select.replaceChildren(new Option("Choisir une voiture…", ""));
 
-      if (!["image/jpeg", "image/png", "image/webp"].includes(file.type)) {
-        reject(new Error(`Format non accepté : ${file.name}`));
-        return;
-      }
+    vehicles.forEach(vehicle => {
+      if (!vehicle.id) return;
+      select.add(new Option(
+        `${vehicle.title || "Véhicule sans nom"} — ${vehicle.price ?? ""} €`,
+        vehicle.id
+      ));
+    });
 
-      const reader = new FileReader();
-      reader.onload = () => resolve({
-        name: file.name,
-        type: file.type,
-        data: reader.result.split(",")[1]
-      });
-      reader.onerror = () => reject(new Error("Impossible de lire une photo."));
-      reader.readAsDataURL(file);
-    })));
+    showStatus(`${vehicles.length} véhicule(s) chargé(s).`);
+  } catch (error) {
+    showStatus("Erreur : " + error.message);
+  } finally {
+    loadButton.disabled = false;
+  }
+}
 
-    const vehicle = {
+function selectVehicle() {
+  selectedVehicle = vehicles.find(vehicle => vehicle.id === select.value) || null;
+
+  document.getElementById("title").value = selectedVehicle?.title || "";
+  document.getElementById("price").value = selectedVehicle?.price ?? "";
+  document.getElementById("description").value = selectedVehicle?.description || "";
+
+  if (selectedVehicle) {
+    showStatus("Véhicule sélectionné. Tu peux modifier ses informations.");
+  }
+}
+
+loadButton.addEventListener("click", loadVehicles);
+select.addEventListener("change", selectVehicle);
+
+document.getElementById("clear-button").addEventListener("click", () => {
+  select.value = "";
+  selectedVehicle = null;
+  form.reset();
+  showStatus("Formulaire effacé.");
+});
+
+form.addEventListener("submit", async event => {
+  event.preventDefault();
+
+  if (!selectedVehicle) {
+    showStatus("Sélectionne d’abord une voiture existante.");
+    return;
+  }
+
+  saveButton.disabled = true;
+  showStatus("Enregistrement des modifications…");
+
+  try {
+    const payload = {
+      id: selectedVehicle.id,
       title: document.getElementById("title").value.trim(),
       price: Number(document.getElementById("price").value),
-      description: document.getElementById("description").value.trim(),
-      images
+      description: document.getElementById("description").value.trim()
     };
 
-    const response = await fetch(API_URL, {
+    const response = await fetch(`${BASE_URL}/api/update-vehicle`, {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "Authorization": "Bearer " +
-          document.getElementById("admin-secret").value
-      },
-      body: JSON.stringify(vehicle)
+      headers: authHeaders(),
+      body: JSON.stringify(payload)
     });
 
     const result = await response.json();
 
     if (!response.ok) {
-      throw new Error(result.error || "La publication a échoué.");
+      throw new Error(result.error || "La modification a échoué.");
     }
 
-    statusBox.textContent = "Véhicule et photos enregistrés dans GitHub.";
-    form.reset();
-    document.getElementById("image-preview").replaceChildren();
-
+    showStatus("Modifications enregistrées. Recharge la liste pour vérifier.");
+    await loadVehicles();
+    select.value = payload.id;
+    selectVehicle();
   } catch (error) {
-    statusBox.textContent = "Erreur : " + error.message;
+    showStatus("Erreur : " + error.message);
   } finally {
-    button.disabled = false;
+    saveButton.disabled = false;
   }
 });
-  </script>
+</script>
 </body>
 </html>
