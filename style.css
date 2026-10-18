@@ -1606,3 +1606,54 @@ body::after {
     font-size: 13px;
     margin: 6px 0;
 }
+
+/* BMW X1, MERCEDES GLC ET AUDI RS3 : STYLE COMPACT */
+#vehicules .vehicle,
+#vehicles .vehicle {
+    height: 285px !important;
+    padding: 8px !important;
+    box-sizing: border-box !important;
+    background: #17191D !important;
+    border: 1px solid #C99A52 !important;
+    border-radius: 8px !important;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+#vehicules .vehicle img,
+#vehicles .vehicle img {
+    width: 100% !important;
+    height: 100px !important;
+    object-fit: cover !important;
+    border-radius: 5px !important;
+    display: block;
+    margin-bottom: 6px !important;
+}
+
+#vehicules .vehicle h3,
+#vehicles .vehicle h3 {
+    color: #E3CA82 !important;
+    font-size: 14px !important;
+    margin: 5px 0 !important;
+}
+
+#vehicules .vehicle p,
+#vehicles .vehicle p {
+    color: #FFFFFF !important;
+    font-size: 11px !important;
+    line-height: 1.35 !important;
+    margin: 4px 0 !important;
+}
+
+#vehicules .vehicle .vehicle-button,
+#vehicles .vehicle .vehicle-button,
+#vehicules .vehicle .vehicle-whatsapp,
+#vehicles .vehicle .vehicle-whatsapp {
+    display: block !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    padding: 8px 4px !important;
+    margin-top: 6px !important;
+    text-align: center !important;
+    font-size: 11px !important;
+}
