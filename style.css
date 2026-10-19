@@ -487,6 +487,8 @@ button:focus-visible {
 :root {
   --lux-navy: #0B1F3A;
   --lux-gold: #C9A44C;
+     --lux-bg: #0B1F3A;
+  --lux-white: #FFFFFF;
 }
 
 /* Cartes des sections et des étapes */
