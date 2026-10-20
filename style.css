@@ -1387,7 +1387,7 @@ footer {
 /* COMMENT ÇA MARCHE : CARTES BLANCHES */
 .steps-container .step {
     background: #17191D !important;
-    color: #17191D !important;
+    color: #FFFFFF !important;
     border: 1px solid #C99A52 !important;
     border-radius: 12px;
     box-shadow: 0 5px 16px rgba(0, 0, 0, 0.18);
@@ -1398,7 +1398,7 @@ footer {
 .steps-container .step p,
 .steps-container .step span,
 .steps-container .step strong {
-    color: #17191D !important;
+    color: #FFFFFF !important;
 }
 
 /* FILIGRANE VOITURE DUVAL TOMOVA CAR */
