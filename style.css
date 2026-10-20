@@ -485,9 +485,9 @@ button:focus-visible {
 /* DUVAL TOMOVA CAR — RESTAURATION DES CARTES ET DES CADRES */
 
 :root {
-  --lux-navy: #0B1F3A;
+  --lux-navy: #17365D;
   --lux-gold: #C9A44C;
-     --lux-bg: #0B1F3A;
+  --lux-bg: #F4F6F8;
   --lux-white: #FFFFFF;
 }
 
