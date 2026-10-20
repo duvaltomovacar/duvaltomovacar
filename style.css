@@ -1277,8 +1277,8 @@ body::before {
     width: 100%;
     text-align: center;
 
-    color: #C99A52;
-    opacity: 0.16;
+    color: #17365D;
+    opacity: 0.045;
 
     font-family: Georgia, "Times New Roman", serif;
     font-size: clamp(30px, 7vw, 100px);
@@ -1287,7 +1287,7 @@ body::before {
     line-height: 1.2;
     white-space: nowrap;
 
-    text-shadow:
+    text-shadow: none;
         0 0 2px rgba(201, 154, 82, 0.5),
         2px 2px 0 rgba(0, 0, 0, 0.8);
 
