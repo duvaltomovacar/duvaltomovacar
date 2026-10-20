@@ -215,7 +215,7 @@ section {
     margin: 0;
     box-sizing: border-box;
     overflow: hidden;
-    background: var(--lux-white);
+    background: #17191D;
     border: 1px solid var(--lux-border);
     border-radius: 10px;
     box-shadow: var(--lux-shadow);
