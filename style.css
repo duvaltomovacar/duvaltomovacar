@@ -485,9 +485,9 @@ button:focus-visible {
 /* DUVAL TOMOVA CAR — RESTAURATION DES CARTES ET DES CADRES */
 
 :root {
-  --lux-navy: #17365D;
+  --lux-navy: #0B1F3A;
   --lux-gold: #C9A44C;
-  --lux-bg: #F4F6F8;
+     --lux-bg: #0B1F3A;
   --lux-white: #FFFFFF;
 }
 
@@ -1277,8 +1277,8 @@ body::before {
     width: 100%;
     text-align: center;
 
-    color: #17365D;
-    opacity: 0.045;
+    color: #C99A52;
+    opacity: 0.16;
 
     font-family: Georgia, "Times New Roman", serif;
     font-size: clamp(30px, 7vw, 100px);
@@ -1287,7 +1287,7 @@ body::before {
     line-height: 1.2;
     white-space: nowrap;
 
-    text-shadow: none;
+    text-shadow:
         0 0 2px rgba(201, 154, 82, 0.5),
         2px 2px 0 rgba(0, 0, 0, 0.8);
 
@@ -1739,123 +1739,4 @@ body::before {
 body > * {
     position: relative;
     z-index: 1;
-}
-
-/* FOND GENERAL CLAIR ET PROFESSIONNEL */
-body {
-    background-color: #F4F6F8 !important;
-    color: #263238;
-}
-
-/* =========================================
-   DUVAL TOMOVA CAR — DESIGN CLAIR
-   ========================================= */
-
-body {
-    background: #F4F6F8 !important;
-    color: #263238 !important;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-/* Sections principales */
-.why-us,
-.contact-section,
-section:has(.steps-container) {
-    background: #F4F6F8 !important;
-    color: #263238 !important;
-}
-
-/* Cartes blanches professionnelles */
-.why-us-card,
-.steps-container .step,
-.hero-services .hero-service,
-.vehicle,
-.vehicle-card,
-.why-card,
-.benefit-card,
-.feature-card,
-.service-card,
-.about-card {
-    background: #FFFFFF !important;
-    color: #263238 !important;
-    border: 1px solid #DCE2E8 !important;
-    border-radius: 12px;
-    box-shadow: 0 4px 16px rgba(23, 54, 93, 0.08);
-}
-
-/* Titres bleu professionnel */
-.why-us h2,
-.why-us-card h3,
-.steps-container .step h3,
-.steps-container .step h4,
-.contact-section h2,
-.hero-service strong,
-.vehicle h2,
-.vehicle h3,
-.vehicle-card h2,
-.vehicle-card h3 {
-    color: #17365D !important;
-}
-
-/* Textes et descriptions */
-.why-us-card p,
-.steps-container .step p,
-.steps-container .step span,
-.steps-container .step strong,
-.hero-service small,
-.contact-section p,
-.contact-section p a:not(.whatsapp-button) {
-    color: #465466 !important;
-}
-
-/* Bordures et détails dorés discrets */
-.why-us-card,
-.steps-container .step,
-.hero-services .hero-service {
-    border-top: 3px solid #C9A44C !important;
-}
-
-/* Navigation bleu professionnel */
-.navbar {
-    background: #FFFFFF !important;
-    box-shadow: 0 2px 12px rgba(23, 54, 93, 0.10);
-}
-
-.navbar .logo {
-    color: #17365D !important;
-}
-
-.navbar .nav-links a {
-    color: #17365D !important;
-}
-
-.navbar .nav-links a:hover {
-    color: #C9A44C !important;
-}
-
-/* Liens de contact */
-.contact-section a:not(.whatsapp-button) {
-    color: #17365D !important;
-}
-
-/* CARTES VEHICULES — STYLE CLAIR */
-.vehicle,
-.vehicle-card {
-    background: #FFFFFF !important;
-    color: #263238 !important;
-    border: 1px solid #DCE2E8 !important;
-    border-radius: 10px !important;
-    box-shadow: 0 4px 14px rgba(23, 54, 93, 0.08) !important;
-}
-
-.vehicle h2,
-.vehicle h3,
-.vehicle-card h2,
-.vehicle-card h3 {
-    color: #17365D !important;
-}
-
-.vehicle p,
-.vehicle-card p {
-    color: #465466 !important;
 }
