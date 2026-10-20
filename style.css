@@ -1726,7 +1726,8 @@ body::before {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) rotate(-25deg);
-    color: rgba(201, 154, 82, 0.045);
+    color: rgba(201, 154, 82, 0.12);
+    text-shadow: 0 0 12px rgba(201, 154, 82, 0.08);
     font-size: clamp(28px, 6vw, 80px);
     font-weight: 800;
     letter-spacing: 6px;
