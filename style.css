@@ -1837,3 +1837,25 @@ section:has(.steps-container) {
 .contact-section a:not(.whatsapp-button) {
     color: #17365D !important;
 }
+
+/* CARTES VEHICULES — STYLE CLAIR */
+.vehicle,
+.vehicle-card {
+    background: #FFFFFF !important;
+    color: #263238 !important;
+    border: 1px solid #DCE2E8 !important;
+    border-radius: 10px !important;
+    box-shadow: 0 4px 14px rgba(23, 54, 93, 0.08) !important;
+}
+
+.vehicle h2,
+.vehicle h3,
+.vehicle-card h2,
+.vehicle-card h3 {
+    color: #17365D !important;
+}
+
+.vehicle p,
+.vehicle-card p {
+    color: #465466 !important;
+}
