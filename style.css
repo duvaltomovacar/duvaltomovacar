@@ -1675,3 +1675,16 @@ body::after {
 .feature-card * {
     color: #FFFFFF !important;
 }
+
+/* CARTES POURQUOI CHOISIR - MÊME STYLE */
+.why-us .why-us-container .why-us-card {
+    background: #17191D !important;
+    color: #FFFFFF !important;
+    border: 1px solid #C99A52 !important;
+}
+
+.why-us .why-us-container .why-us-card h3,
+.why-us .why-us-container .why-us-card p,
+.why-us .why-us-container .why-us-card .why-icon {
+    color: #FFFFFF !important;
+}
