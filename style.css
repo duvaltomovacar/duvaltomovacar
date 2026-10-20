@@ -1718,3 +1718,24 @@ body::after {
 #contact.contact-section .whatsapp-button {
     color: #FFFFFF !important;
 }
+
+/* FILIGRANE LUXE - DUVAL TOMOVA CAR */
+body::before {
+    content: "DUVAL TOMOVA CAR";
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-25deg);
+    color: rgba(201, 154, 82, 0.045);
+    font-size: clamp(28px, 6vw, 80px);
+    font-weight: 800;
+    letter-spacing: 6px;
+    white-space: nowrap;
+    pointer-events: none;
+    z-index: 0;
+}
+
+body > * {
+    position: relative;
+    z-index: 1;
+}
