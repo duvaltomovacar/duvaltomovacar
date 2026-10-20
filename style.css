@@ -1660,3 +1660,18 @@ body::after {
     text-align: center !important;
     font-size: 11px !important;
 }
+
+/* MÊMES COULEURS POUR LES CARTES AVANTAGES */
+.why-card,
+.benefit-card,
+.feature-card {
+    background: #17191D !important;
+    color: #FFFFFF !important;
+    border: 1px solid #C99A52 !important;
+}
+
+.why-card *,
+.benefit-card *,
+.feature-card * {
+    color: #FFFFFF !important;
+}
