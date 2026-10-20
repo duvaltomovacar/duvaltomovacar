@@ -1740,3 +1740,9 @@ body > * {
     position: relative;
     z-index: 1;
 }
+
+/* FOND GENERAL CLAIR ET PROFESSIONNEL */
+body {
+    background-color: #F4F6F8 !important;
+    color: #263238;
+}
