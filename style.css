@@ -1701,3 +1701,20 @@ body::after {
 .hero-services .hero-service span {
     color: #FFFFFF !important;
 }
+
+/* SECTION CONTACT - STYLE SOMBRE ET DORÉ */
+#contact.contact-section {
+    background: #17191D !important;
+    color: #FFFFFF !important;
+    border: 1px solid #C99A52 !important;
+}
+
+#contact.contact-section h2,
+#contact.contact-section p,
+#contact.contact-section p a:not(.whatsapp-button) {
+    color: #FFFFFF !important;
+}
+
+#contact.contact-section .whatsapp-button {
+    color: #FFFFFF !important;
+}
